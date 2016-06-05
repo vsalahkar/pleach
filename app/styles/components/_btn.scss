@@ -1,0 +1,19 @@
+.search-form__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: $primary-color;
+    @include resp-height(3.5rem);
+    color: $base-color-1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $primary-font;
+    transition: ease .7s;
+
+    &:hover {
+        background-color: lighten($primary-color, 5);
+        transition-timing-function: ease-in;
+        transition: ease .7s;
+    }
+}

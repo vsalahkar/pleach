@@ -1,0 +1,38 @@
+@mixin resp-font($x-large-size) {
+	font-size: $x-large-size;
+	@media #{$small-only} {
+		font-size: $x-large-size *0.5;
+	}
+	@media #{$medium-only} {
+		font-size: $x-large-size *0.75;
+	}
+	@media #{$large-only} {
+		font-size: $x-large-size *0.85;
+	}
+}
+
+@mixin resp-padding($x-large-size1, $x-large-size2) {
+	padding: ($x-large-size1) ($x-large-size2);
+	@media #{$small-only} {
+		padding : ($x-large-size1 *0.43) ($x-large-size2 *0.15);
+	}
+	@media #{$medium-only} {
+		padding : ($x-large-size1 *0.75) ($x-large-size2 *0.45);
+	}
+	@media #{$large-only} {
+		padding : ($x-large-size1 *0.85) ($x-large-size2 *0.7);
+	}
+}
+
+@mixin resp-height($x-large-size) {
+	height: $x-large-size;
+	@media #{$small-only} {
+		height: $x-large-size *0.7;
+	}
+	@media #{$medium-only} {
+		height: $x-large-size *0.85;
+	}
+	@media #{$large-only} {
+		height: $x-large-size *0.9;
+	}
+}

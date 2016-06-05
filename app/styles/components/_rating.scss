@@ -1,0 +1,16 @@
+.rating-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0.25rem;
+
+    &--full {
+        @extend .rating-circle;
+        background: $base-color-1;
+    }
+
+    &--empty {
+        @extend .rating-circle;
+        border: 1px solid $base-color-1;
+    }
+}
