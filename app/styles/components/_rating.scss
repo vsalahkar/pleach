@@ -1,4 +1,5 @@
 .rating-circle {
+    display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -11,6 +12,6 @@
 
     &--empty {
         @extend .rating-circle;
-        border: 1px solid $base-color-1;
+        border: 2px solid $base-color-1;
     }
 }
