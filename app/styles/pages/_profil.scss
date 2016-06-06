@@ -8,6 +8,9 @@
         overflow: visible !important;
         color: $base-color-1;
         font-family: $primary-font;
+        @media #{$large} {
+            height: 100vh;
+        }
     }
 
     &__content {
@@ -185,10 +188,14 @@
         bottom: 1rem;
         align-items: center;
         height: 4rem;
+        @media #{$large} {
+            display: none;
+        }
 
         .footer__social {
             margin: 0 1.5rem;
             text-align: center;
+
             &--fb,
             &--ig,
             &--tw {
@@ -209,6 +216,7 @@
             border-radius: 50%;
             bottom: -2rem;
             margin: 0 1.5rem;
+            box-shadow: 0 2px 4px 10px rgba(125, 205, 211, 0.83), 0 10px 6px 9px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
             img {
                 width: auto;
@@ -216,19 +224,12 @@
                 position: absolute;
                 box-shadow: 0 0 0 10px lightblue, 0 0 5px 10px black;
             }
-
-            .image-shadow-mask {
-                position: absolute;
-                height: 13rem;
-                width: 13rem;
-                border-radius: 50%;
-                box-shadow: 0 0 0 10px lightblue;
-            }
         }
 
         .footer__rating-average {
             display: flex;
             align-items: center;
+
             p {
                 display: inline-block;
                 margin: 0 1.5rem;
@@ -238,7 +239,7 @@
 
         .footer__profil-name {
             h4 {
-                text-transform: uppercase;;
+                text-transform: uppercase;
                 font-weight: bolder;
                 @include resp-font(2rem);
                 margin: 0 1.5rem;
