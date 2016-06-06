@@ -1,0 +1,177 @@
+$turquoise: #53e1dc;
+$violet: #838ab6;
+$rayon_cercle: 75px;
+$petit_ecran: '640px';
+$moyen_ecran: '1040px';
+$grand_ecran: '1440px';
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: url("map.png");
+	color: white;
+	margin: 0;
+	.header {
+		display: block;
+		float: right;
+		&__boite {
+			display: inline-block;
+			float: left;
+			margin: $rayon_cercle/1.5 20px 0;
+			text-align: center;
+			text-decoration: none;
+		}
+		&__boite__proposition {
+			background-color: $turquoise;
+			text-transform: uppercase;
+			width: 200px;
+			border-radius: 50px;
+			height: 25px;
+			box-shadow: 2px 2px $violet;
+			font-weight: bold;
+			color: white;
+			line-height: 26px;
+		}
+		&__boite__messagerie {
+			text-transform: uppercase;
+			color: $violet;
+			font-weight: bold;
+		}
+		&__cercle {
+			width: $rayon_cercle;
+			height: $rayon_cercle;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			background: url("vincent.jpg");
+			background-size: cover;
+			text-align: center;
+			display: inline-block;
+			float: right;
+			margin: 20px;
+		}
+	}
+	.contenu__creation {
+		background-image: linear-gradient(160deg,rgba(131, 138,182,0.8), rgba(83, 225, 220, 0.8));
+		display: inline-block;
+		width: 40%;
+		height: 350px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		box-shadow: 3px 3px 3px grey;
+		position: absolute;
+		padding: 15 30 25 30;
+		@media screen and(min-width: $grand_ecran) {
+			width: 30%;
+			height: 400px;
+		}
+		@media screen and(max-width: $petit_ecran) {
+			width: 100%;
+		}
+		#croix {
+			z-index: 99999999999;
+			width: 52px;
+			height: 52px;
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			top:0;
+			@media screen and(max-width: $petit_ecran) {
+				width: 42px;
+				height: 42px;
+			}
+		}
+		&__en-tete {
+			display: block;
+			overflow: hidden;
+			clear: both;
+			height: auto;
+			&__texte {
+				font-weight: normal;
+				text-transform: uppercase;
+				display: inline-block;
+				font-size: 25;
+				position: relative;
+				float: none;
+				margin: 0;
+				@media screen and(max-width: $moyen_ecran) {
+					font-size: 20;
+				}
+			}
+		}
+		&__formulaire__f1,
+		&__formulaire__f2 {
+			display: block;
+			width: 100%;
+			input {
+				background-color: rgba(108, 129, 164, 0.8);
+				border: none;
+				box-shadow: 2px 2px 2px grey;
+				border-radius: 5px;
+				text-align: center;
+				height: 25px;
+				margin: 15 4 10 4;
+				color: white;
+			}
+			#description,
+			#niveau,
+			#theme,
+			#titre,#localisation {
+				width: 420;
+				display: block;
+				margin: auto;
+			}
+			#description {
+				height: 136;
+				display: block;
+				margin: auto;
+			}
+			#date,
+			#horaire,
+			#duree,#participant,
+			#tarif,
+			#telephone {
+				display: block;
+				float: none;
+				width: 250px;
+				margin: auto;
+			}
+			.form-group{
+				margin: 11 11 11 11;
+			}
+			&__remplir {
+				display: block;
+			}
+			&__footer {
+				display: inline-block;
+			}
+			.footer__continuer {
+				background-color: $turquoise;
+				box-shadow: 2px 2px 2px grey;
+				width: 165px;
+				height: 30px;
+				text-align: center;
+				border-radius: 5px;
+				text-transform: uppercase;
+				font-weight: bold;
+				line-height: 31px;
+				color: white;
+				display: inline-block;
+				margin: 15px 0 0 7px;
+				position: relative;
+				text-decoration: none;
+			}
+			#footer__progression__icone {
+				display: inline-block;
+				width: 1.5rem;
+				height: 1.5rem;
+				fill: white;
+			}
+			.footer__progression {
+				position: relative;
+				display: inline-block;
+				margin-top: 15px;
+				float: right;
+			}
+		}
+	}
+}

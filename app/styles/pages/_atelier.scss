@@ -1,0 +1,252 @@
+// Variables
+$turquoise: #53e1dc;
+$violet: #838ab6;
+$petit_ecran: '640px';
+$moyen_ecran: '1040px';
+$grand_ecran: '1440px';
+$rayon_cercle: 80px;
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	*,
+	*:after,
+	*:before {
+		-webkit-box-sizing: inherit;
+		-moz-box-sizing: inherit;
+		box-sizing: inherit;
+	}
+	body {
+		font-family: 'Open Sans', sans-serif;
+		background-image: url("../../images/map.png");
+		margin: 0;
+		color: white;
+		.italic {
+			font-style: italic;
+		}
+		.gras {
+			font-weight: bold;
+		}
+		.contenu__atelier {
+			background-image: linear-gradient(to right, rgba(131, 138,182,0.8), rgba(83, 225, 220, 0.8));
+			width: 80%;
+			top: 0;
+			position: absolute;
+			padding: 4rem;
+			text-shadow: 0.1rem 0.1rem $violet;
+			@media screen and(max-width: $petit_ecran) {
+				width: 100%;
+			}
+		}
+		.triangle {
+			width: 25%;
+			height: auto;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			@media screen and(max-width: $moyen_ecran) {
+				display: none;
+			}
+		}
+		.prix__grand-ecran__texte {
+			width: auto;
+			height: auto;
+			display: inline-block;
+			margin-left: 85%;
+			position: absolute;
+			@media screen and(max-width: $moyen_ecran) {
+				display: none;
+			}
+		}
+		#croix {
+			@media screen and(min-width: $moyen_ecran) {
+				position: absolute;
+				margin-left: 88%;
+				top: 0;
+				width: 52px;
+				height: 52px;
+			}
+			@media screen and(max-width:$moyen_ecran) {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 45px;
+				height: 45px;
+			}
+		}
+		.header {
+			overflow: hidden;
+			clear: both;
+			&__nom__atelier {
+				text-transform: uppercase;
+				font-size: 35px;
+				margin: auto;
+				display: block;
+				float: left;
+			}
+			&__niveau {
+				margin-top: 0.5rem;
+				margin-left: 2%;
+				font-style: italic;
+				font-size: 25px;
+				display: block;
+				float: left;
+				@media screen and(max-width: $moyen_ecran) {
+					margin-bottom: 1.2rem;
+				}
+				@media screen and(max-width: $petit_ecran) {
+					margin-bottom: 0.8rem;
+				}
+			}
+			&__prix__petit-ecran {
+				overflow: hidden;
+				clear: both;
+				margin: 0 0 15px;
+				@media (min-width: $moyen_ecran) and (max-width: $grand_ecran) {
+					display: none;
+				}
+				@media screen and(max-width: $moyen_ecran) {
+					display: block;
+					text-align: center;
+				}
+				@media screen and(max-width: $petit_ecran) {
+					margin: 0;
+				}
+				.trait {
+					@media screen and(min-width: $moyen_ecran) {
+						visibility: hidden;
+						height: 0;
+						width: 0;
+					}
+					@media screen and(max-width: $moyen_ecran) {
+						height: 0.1rem;
+						width: 100%;
+						visibility: visible;
+						background-color: white;
+					}
+				}
+				&__texte {
+					@media screen and(min-width: $moyen_ecran) {
+						display: none;
+					}
+					@media screen and(max-width: $moyen_ecran) {
+						text-align: center;
+						margin: 1rem 0;
+						font-size: 150%;
+					}
+				}
+			}
+		}
+		.icone-bloc {
+			display: inline-block;
+			float: none;
+			width: 100%;
+			margin-top: 0.7rem;
+			@media screen and(max-width: $moyen_ecran) {
+				width: 100%;
+			}
+			&__indiv {
+				width: 33%;
+				display: block;
+				float: left;
+				@media screen and(max-width: $petit_ecran) {
+					float: none;
+					width: 100%;
+					margin-top: 1rem;
+				}
+			}
+			#icone-bloc__icone {
+				margin: auto;
+				display: block;
+			}
+			&__texte {
+				display: block;
+				text-align: center;
+			}
+		}
+		.texte-bloc {
+			display: block;
+			float: left;
+			width: 100%;
+			text-align: justify;
+		}
+		.footer {
+			display: inline-block;
+			float: left;
+			margin-top: 1rem;
+			width: 100%;
+			&__cercle-bloc {
+				@media screen and(min-width: $moyen_ecran) {
+					float: left; //alignement des textes sur grand ecran
+					width: 92px;
+					display: inline-block;
+				}
+				@media screen and(max-width: $moyen_ecran) {
+					float: left;
+					width: 100%;
+					display: inline-block;
+				}
+				@media screen and(max-width: $petit_ecran) {
+					width: 100%;
+				}
+			}
+			&__cercle {
+				width: $rayon_cercle;
+				height: $rayon_cercle;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: url("audrey.jpg");
+				background-size: cover;
+				margin: auto;
+				text-decoration: none;
+			}
+			&__texte {
+				text-align: center;
+				height: 2rem;
+				text-decoration: none;
+				color: white;
+				@media screen and(min-width: $moyen_ecran) {
+					float: left; //alignement des textes sur grand ecran
+					width: 180px;
+					margin: 27px auto 0;
+					display: inline-block;
+				}
+				@media screen and(max-width: $moyen_ecran) {
+					float: left;
+					width: 100%;
+					margin: $rayon_cercle/3 auto 0;
+					display: inline-block;
+				}
+				@media screen and(max-width: $petit_ecran) {
+					float: none;
+					width: 100%;
+				}
+				&__notation {
+					display: block;
+				}
+				&__inscription {
+					background-color: $violet;
+					border-radius: 0.5rem;
+					font-weight: bold;
+					padding-top: 0.5rem;
+					width: 140px;
+					align-self: auto;
+					text-transform: uppercase;
+					line-height: 17px;
+					text-decoration: none;
+					color: white;
+					@media screen and(max-width: $moyen_ecran) {
+						margin-left: 32%;
+					}
+				}
+			}
+			#footer__icone {
+				display: inline-block;
+				width: 1.3rem;
+				fill: white;
+			}
+		}
+	}
+}
