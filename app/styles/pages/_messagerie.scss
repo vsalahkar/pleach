@@ -1,21 +1,9 @@
-$turquoise: #53e1dc;
-$violet: #838ab6;
+
 $rayon_cercle: 80px;
 $petit_ecran: '640px';
 $moyen_ecran: '1040px';
 $grand_ecran: '1440px';
-html {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-*,
-*:after,
-*:before {
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-image: url("../images/map.png");
@@ -38,19 +26,19 @@ body {
 				text-decoration: none;
 			}
 			&__boite__proposition {
-				background-color: $turquoise;
+				background-color: $secondary-color;
 				text-transform: uppercase;
 				width: 200px;
 				border-radius: 50px;
 				height: 25px;
-				box-shadow: 2px 2px $violet;
+				box-shadow: 2px 2px $primary-color;
 				font-weight: bold;
 				color: white;
 				line-height: 26px;
 			}
 			&__boite__messagerie {
 				text-transform: uppercase;
-				color: $violet;
+				color: $primary-color;
 				font-weight: bold;
 			}
 			&__cercle {
@@ -115,7 +103,7 @@ body {
 					-moz-border-radius: 50%;
 					-webkit-border-radius: 50%;
 					border-radius: 50%;
-					background: $turquoise;
+					background: $secondary-color;
 					background-size: cover;
 					position: relative;
 					text-align: center;
@@ -197,7 +185,7 @@ body {
 						-moz-border-radius: 50%;
 						-webkit-border-radius: 50%;
 						border-radius: 50%;
-						background: $turquoise;
+						background: $secondary-color;
 						background-size: cover;
 						float: left; //alignement des textes sur grand ecran
 						display: inline-block;

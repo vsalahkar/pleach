@@ -1,13 +1,11 @@
-$turquoise: #53e1dc;
-$violet: #838ab6;
 $rayon_cercle: 75px;
 $petit_ecran: '640px';
 $moyen_ecran: '1040px';
 $grand_ecran: '1440px';
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-image: url("map.png");
-	color: white;
 	margin: 0;
 	.header {
 		display: block;
@@ -20,19 +18,19 @@ body {
 			text-decoration: none;
 		}
 		&__boite__proposition {
-			background-color: $turquoise;
+			background-color: $secondary-color;
 			text-transform: uppercase;
 			width: 200px;
 			border-radius: 50px;
 			height: 25px;
-			box-shadow: 2px 2px $violet;
+			box-shadow: 2px 2px $primary-color;
 			font-weight: bold;
 			color: white;
 			line-height: 26px;
 		}
 		&__boite__messagerie {
 			text-transform: uppercase;
-			color: $violet;
+			color: $primary-color;
 			font-weight: bold;
 		}
 		&__cercle {
@@ -145,7 +143,7 @@ body {
 				display: inline-block;
 			}
 			.footer__continuer {
-				background-color: $turquoise;
+				background-color: $secondary-color;
 				box-shadow: 2px 2px 2px grey;
 				width: 165px;
 				height: 30px;
