@@ -76,4 +76,8 @@
             }
         }
     }
+
+    footer {
+        @include resp-padding(1rem, 0);
+    }
 }

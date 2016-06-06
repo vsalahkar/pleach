@@ -15,16 +15,6 @@ header {
         align-content: center;
     }
 
-    .header__sign-in, .header__sign-up {
-        display: inline-block;
-
-        &--btn {
-            text-decoration: none;
-            @include resp-padding(1rem, 2rem);
-            color: $base-color-1;
-        }
-    }
-
     .header__logo {
         display: none;
 

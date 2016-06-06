@@ -1,46 +1,42 @@
-.landing-page {
-    footer {
-        @include resp-padding(1rem, 0);
+.search-form {
+    font-family: $primary-font;
+    @include resp-font(1.2rem);
+    width: 60%;
+    margin: auto;
+    display: flex;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    @media #{$large} {
+        display: block;
+        box-shadow: none;
+    }
 
-        .search-form {
-            font-family: $primary-font;
-            @include resp-font(1.2rem);
-            width: 60%;
-            margin: auto;
-            display: flex;
+    &__address,
+    &__btn,
+    &__rayon {
+        flex-grow: 3;
+        text-align: center;
+        @media #{$large} {
+            width: 100%;
+            margin-top: 1rem;
             box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+        }
+
+        input {
+            border: none;
+            @include resp-height(3.5rem);
+            width: 100%;
+            padding: 0 1rem;
+            color: $primary-color;
             @media #{$large} {
-                display: block;
-                box-shadow: none;
+                border-radius: 5px;
             }
+        }
+    }
 
-            &__address, &__rayon, &__btn {
-                flex-grow: 3;
-                text-align: center;
-                @media #{$large} {
-                    width: 100%;
-                    margin-top: 1rem;
-                    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-                }
-
-                input {
-                    border: none;
-                    @include resp-height(3.5rem);
-                    width: 100%;
-                    padding: 0 1rem;
-                    color: $primary-color;
-                    @media #{$large} {
-                        border-radius: 5px;
-                    }
-                }
-            }
-
-            #address {
-                @media (min-width: 1024px) {
-                    border-radius: 5px 0 0 5px;
-                    border-right: 1px solid $primary-color !important;
-                }
-            }
+    #address {
+        @media (min-width: 1024px) {
+            border-radius: 5px 0 0 5px;
+            border-right: 1px solid $primary-color !important;
         }
     }
 }
