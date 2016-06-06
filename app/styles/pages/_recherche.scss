@@ -18,7 +18,7 @@ html {
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	background-image: url("map.png");
+	background-image: url("../images/map.png");
 	color: white;
 	text-shadow: 2px 2px $violet;
 	margin: 0;
@@ -185,7 +185,7 @@ body {
 				-moz-border-radius: 50%;
 				-webkit-border-radius: 50%;
 				border-radius: 50%;
-				background: url("audrey.jpg");
+				background: url("../images/audrey.jpg");
 				background-size: cover;
 				margin: auto;
 				text-decoration: none;
