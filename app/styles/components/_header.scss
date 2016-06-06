@@ -1,11 +1,13 @@
 header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    @include resp-padding(4rem, 4rem);
     width: 100%;
-    text-align: right;
     @include resp-font(1.7rem);
     text-transform: uppercase;
-    font-family: $primary-font;
     font-weight: 700;
-
+    text-align: right;
     @media #{$small-only} {
         display: flex;
         align-items: center;
@@ -17,7 +19,6 @@ header {
 
     .header__logo {
         display: none;
-
         @media #{$small-only} {
             display: block;
             width: 4rem;

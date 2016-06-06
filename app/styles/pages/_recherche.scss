@@ -1,27 +1,11 @@
-$turquoise: #53e1dc;
-$violet: #838ab6;
 $rayon_cercle: 80px;
 $petit_ecran: '640px';
 $moyen_ecran: '1040px';
 $grand_ecran: '1440px';
-html {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-*,
-*:after,
-*:before {
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-image: url("../images/map.png");
-	color: white;
-	text-shadow: 2px 2px $violet;
-	margin: 0;
 	.italic {
 		font-style: italic;
 	}
@@ -152,7 +136,7 @@ body {
 		}
 		/* COLORS */
 		.white {
-			background: $violet;
+			background: $primary-color;
 		}
 		&__plus {
 			margin-top: 50px;
@@ -215,7 +199,7 @@ body {
 					display: block;
 				}
 				&__inscription {
-					background-color: $violet;
+					background-color: $primary-color;
 					border-radius: 0.5rem;
 					font-weight: bold;
 					padding-top: 0.5rem;

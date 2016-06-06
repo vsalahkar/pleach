@@ -1,18 +1,18 @@
 @import "variables";
-// @import "components/section";
-// @import "components/button";
-// @import "components/nav";
+//__helpers
 @import "helpers/mixin";
-@import "pages/header";
+//__pages
 @import "pages/landing-page";
 @import "pages/profil";
 @import "pages/creation_atelier";
 @import "pages/atelier";
 @import "pages/messagerie";
 @import "pages/recherche";
+//__components
 @import "components/search-form";
 @import "components/btn";
 @import "components/rating";
+@import "components/header";
 
 html {
     -webkit-box-sizing: border-box;
@@ -31,6 +31,7 @@ html {
 
 body {
     margin: 0;
+    font-family: $primary-font;
 
     .map-bg {
         position: relative;
