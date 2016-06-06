@@ -1,6 +1,4 @@
 .landing-page {
-    font-family: $primary-font;
-
     &__layout {
         width: 100%;
         height: 100vh;
@@ -19,6 +17,9 @@
         left: 0;
         @media #{$small-only} {
             display: none;
+        }
+        @media #{$medium-only} {
+            padding: 0 0 10rem 10rem;
         }
 
         &::after {
@@ -44,15 +45,27 @@
                 left: 0.7rem;
                 top: 0.7rem;
             }
+            @media #{$medium-only} {
+                width: 4.2rem;
+                left: 0.9rem;
+                top: 0.9rem;
+            }
         }
     }
 
     .content {
+        min-height: 60vh;
         text-align: center;
-        @include resp-padding(8rem, 2rem);
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        @include resp-padding(2rem, 4rem);
 
         .title {
-            padding: 2rem 0;
+            padding: 4rem 0;
 
             h1 {
                 color: $base-color-1;
@@ -66,7 +79,7 @@
         }
 
         .subtitle {
-            @include resp-padding(2rem, 20rem);
+            @include resp-padding(2rem, 15rem);
 
             h2 {
                 color: $base-color-1;
