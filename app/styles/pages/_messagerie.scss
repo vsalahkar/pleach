@@ -9,9 +9,11 @@ body {
 	background-image: url("../images/map.png");
 	color: white;
 	margin: 0;
+
 	.italic {
 		font-style: italic;
 	}
+
 	.messagerie__wrap {
 		#croix {
 			position: relative;
@@ -24,6 +26,7 @@ body {
 				float: right;
 			}
 		}
+
 		.header {
 			display: block;
 			float: right;
@@ -31,6 +34,7 @@ body {
 			@media screen and(max-width: $moyen_ecran) {
 				display: none;
 			}
+
 			&__boite {
 				display: inline-block;
 				float: left;
@@ -38,6 +42,7 @@ body {
 				text-align: center;
 				text-decoration: none;
 			}
+
 			&__boite__proposition {
 				background-color: $secondary-color;
 				text-transform: uppercase;
@@ -49,11 +54,13 @@ body {
 				color: white;
 				line-height: 26px;
 			}
+
 			&__boite__messagerie {
 				text-transform: uppercase;
 				color: $primary-color;
 				font-weight: bold;
 			}
+
 			&__cercle {
 				width: $rayon_cercle;
 				height: $rayon_cercle;
@@ -68,6 +75,7 @@ body {
 				margin: 20px;
 			}
 		}
+
 		.contenu__messagerie {
 			height: auto;
 			background-image: linear-gradient(160deg,rgba(131, 138,182,0.8), rgba(83, 225, 220, 0.8));
@@ -96,14 +104,15 @@ body {
 				height: auto;
 				top: 0;
 			}
-<<<<<<< HEAD
+
 			.en-tete {
 				&__petit {
 					width: 100%;
-					display: inline-block;;
+					display: inline-block;
 					@media screen and(min-width: $moyen_ecran) {
 						display: none;
 					}
+
 					&__boite {
 						display: inline-block;
 						float: left;
@@ -112,18 +121,20 @@ body {
 						text-align: center;
 						width: 200px;
 					}
+
 					&__boite__proposition {
-						background-color: $turquoise;
+						background-color: $secondary-color;
 						text-transform: uppercase;
 						width: 200px;
 						border-radius: 50px;
 						height: 25px;
-						box-shadow: 2px 2px $violet;
+						box-shadow: 2px 2px $primary-color;
 						display: inline-block;
 						float: left;
 						line-height: 25px;
 						margin-top: 15px;
 					}
+
 					&__boite__messagerie {
 						text-transform: uppercase;
 						font-weight: bold;
@@ -133,6 +144,7 @@ body {
 						margin-top: 15px;
 						color: white;
 					}
+
 					&__cercle {
 						width: $rayon_cercle;
 						height: $rayon_cercle;
@@ -144,158 +156,180 @@ body {
 						display: inline-block;
 						float: right;
 					}
-=======
-			#croix {
-				position: relative;
-				float: right;
-				z-index: 99999999999;
-				width: 52px;
-				height: 52px;
-			}
-			.header {
-				width: 85%;
-				&__cercle-bloc {
-					float: left; //alignement des textes sur grand ecran
-					display: inline-block;
-					margin-top: 0.3rem;
-					position: relative;
-				}
-				&__cercle {
-					width: $rayon_cercle/2.5;
-					height: $rayon_cercle/2.5;
-					-moz-border-radius: 50%;
-					-webkit-border-radius: 50%;
-					border-radius: 50%;
-					background: $secondary-color;
-					background-size: cover;
-					position: relative;
-					text-align: center;
-					line-height: 30px;
->>>>>>> 72743b46ce6a1aada1dc4c5c2c5fac8a06638a8c
-				}
-				h1 {
-					font-size: 20px;
-					font-weight: lighter;
-					display: inline-block;
-				}
-				&__messagerie {
-					display: inline-block;
-					float: left;
-				}
-				&__conversation {
-					float: right;
-					display: inline-block;
-					@media screen and(max-width: $grand_ecran) {
-						font-size: 5px;
+
+					#croix {
+						position: relative;
+						float: right;
+						z-index: 99999999999;
+						width: 52px;
+						height: 52px;
 					}
-				}
-				&__cercle {
-					width: $rayon_cercle/4;
-					height: $rayon_cercle/4;
-					-moz-border-radius: 50%;
-					-webkit-border-radius: 50%;
-					border-radius: 50%;
-					background: $turquoise;
-					background-size: cover;
-					display: inline-block;
-					float: left;
-					text-align: center;
-					line-height: 18px;
-					margin-top: 18;
-					margin-right: 25px;
-				}
-			}
-			.conversation {
-				float: none;
-				display: block;
-				&__atelier {
-					margin-top: 30;
-					text-align: justify;
-					display: inline-block;
-					width: 100%;
-					&__message_nonlu {
+
+					.header {
+						width: 85%;
+
+						&__cercle-bloc {
+							float: left; //alignement des textes sur grand ecran
+							display: inline-block;
+							margin-top: 0.3rem;
+							position: relative;
+						}
+
+						&__cercle {
+							width: $rayon_cercle/2.5;
+							height: $rayon_cercle/2.5;
+							-moz-border-radius: 50%;
+							-webkit-border-radius: 50%;
+							border-radius: 50%;
+							background: $secondary-color;
+							background-size: cover;
+							position: relative;
+							text-align: center;
+							line-height: 30px;
+						}
+
+						h1 {
+							font-size: 20px;
+							font-weight: lighter;
+							display: inline-block;
+						}
+
+						&__messagerie {
+							display: inline-block;
+							float: left;
+						}
+
+						&__conversation {
+							float: right;
+							display: inline-block;
+							@media screen and(max-width: $grand_ecran) {
+								font-size: 5px;
+							}
+						}
+
+						&__cercle {
+							width: $rayon_cercle/4;
+							height: $rayon_cercle/4;
+							-moz-border-radius: 50%;
+							-webkit-border-radius: 50%;
+							border-radius: 50%;
+							background: $secondary-color;
+							background-size: cover;
+							display: inline-block;
+							float: left;
+							text-align: center;
+							line-height: 18px;
+							margin-top: 18;
+							margin-right: 25px;
+						}
+					}
+
+					.conversation {
+						float: none;
 						display: block;
-						margin-top: 10px;
-						@media (min-width: $petit_ecran) and(max-width: $moyen_ecran) {
-							margin-top: 10px;
-						}
-						@media screen and (max-width: $petit_ecran) {
-							margin-top: 10px;
+
+						&__atelier {
+							margin-top: 30;
+							text-align: justify;
+							display: inline-block;
+							width: 100%;
+
+							&__message_nonlu {
+								display: block;
+								margin-top: 10px;
+								@media (min-width: $petit_ecran) and(max-width: $moyen_ecran) {
+									margin-top: 10px;
+								}
+								@media screen and (max-width: $petit_ecran) {
+									margin-top: 10px;
+								}
+							}
+
+							&__message_lu {
+								display: block;
+								margin-top: 10px;
+								@media (min-width: $petit_ecran) and(max-width: $moyen_ecran) {
+									margin-top: 10px;
+								}
+								@media screen and (max-width: $petit_ecran) {
+									margin-top: 10px;
+								}
+							}
+
+							&__cercle-bloc {
+								float: left; //alignement des textes sur grand ecran
+								display: inline-block;
+								@media screen and(max-width: $moyen_ecran) {
+									margin-left: 45%;
+								}
+							}
+
+							&__cercle {
+								width: $rayon_cercle/1.5;
+								height: $rayon_cercle/1.5;
+								-moz-border-radius: 50%;
+								-webkit-border-radius: 50%;
+								border-radius: 50%;
+							}
+
+							&__texte {
+								display: inline-block;
+								margin-left: 20px;
+								@media screen and(min-width: $moyen_ecran) {
+									width: 70%;
+								}
+								@media screen and(max-width: $petit_ecran) {
+									width: 95%;
+									margin-top: 15px;
+								}
+							}
+
+							&__cercle-nonlu {
+								width: $rayon_cercle/6;
+								height: $rayon_cercle/6;
+								-moz-border-radius: 50%;
+								-webkit-border-radius: 50%;
+								border-radius: 50%;
+								background: $secondary-color;
+								background-size: cover;
+								float: left; //alignement des textes sur grand ecran
+								display: inline-block;
+								margin-right: 2%;
+								margin-top: $rayon_cercle/14;
+							}
+
+							&__nom-atelier {
+								font-weight: bold;
+								font-size: 15;
+							}
+
+							p {
+								font-size: 13;
+								margin: 0;
+							}
 						}
 					}
-					&__message_lu {
-						display: block;
-						margin-top: 10px;
-						@media (min-width: $petit_ecran) and(max-width: $moyen_ecran) {
-							margin-top: 10px;
-						}
-						@media screen and (max-width: $petit_ecran) {
-							margin-top: 10px;
-						}
-					}
-					&__cercle-bloc {
-						float: left; //alignement des textes sur grand ecran
-						display: inline-block;
-						@media screen and(max-width: $moyen_ecran) {
-							margin-left: 45%;
-						}
-					}
-					&__cercle {
-						width: $rayon_cercle/1.5;
-						height: $rayon_cercle/1.5;
-						-moz-border-radius: 50%;
-						-webkit-border-radius: 50%;
-						border-radius: 50%;
-					}
-					&__texte {
-						display: inline-block;
-						margin-left: 20px;
-						@media screen and(min-width: $moyen_ecran) {
-							width: 70%;
-						}
-						@media screen and(max-width: $petit_ecran) {
-							width: 95%;
-							margin-top: 15px;
-						}
-					}
-					&__cercle-nonlu {
-						width: $rayon_cercle/6;
-						height: $rayon_cercle/6;
-						-moz-border-radius: 50%;
-						-webkit-border-radius: 50%;
-						border-radius: 50%;
-						background: $secondary-color;
+
+					.vincent {
+						background: url("../images/vincent.jpg");
 						background-size: cover;
-						float: left; //alignement des textes sur grand ecran
-						display: inline-block;
-						margin-right: 2%;
-						margin-top: $rayon_cercle/14;
 					}
-					&__nom-atelier {
-						font-weight: bold;
-						font-size: 15;
+
+					.adrien {
+						background: url("../images/adrien.jpg");
+						background-size: cover;
 					}
-					p {
-						font-size: 13;
-						margin: 0;
+
+					.thomas {
+						background: url("../images/thomas.jpg");
+						background-size: cover;
+					}
+
+					.bendo {
+						background: url("../images/bendo.jpg");
+						background-size: cover;
 					}
 				}
-			}
-			.vincent {
-				background: url("../images/vincent.jpg");
-				background-size: cover;
-			}
-			.adrien {
-				background: url("../images/adrien.jpg");
-				background-size: cover;
-			}
-			.thomas {
-				background: url("../images/thomas.jpg");
-				background-size: cover;
-			}
-			.bendo {
-				background: url("../images/bendo.jpg");
-				background-size: cover;
 			}
 		}
 	}
