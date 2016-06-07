@@ -3,27 +3,29 @@ $petit_ecran: '640px';
 $moyen_ecran: '1040px';
 $grand_ecran: '1440px';
 $rayon_cercle: 80px;
-
 body {
 	font-family: 'Open Sans', sans-serif;
-
 	.italic {
 		font-style: italic;
 	}
-
 	.gras {
 		font-weight: bold;
 	}
-
 	.contenu__atelier {
 		background-image: linear-gradient(to right, rgba(131, 138,182,0.8), rgba(83, 225, 220, 0.8));
 		width: 80%;
 		top: 0;
 		position: absolute;
-		padding: 70px;
-		text-shadow: 0.1rem 0.1rem $primary-color;
-		@media screen and(max-width: $petit_ecran) {
+		padding: 100px;
+		box-shadow: 3px 3px 50px grey;
+		height: 100%;
+		overflow-x: auto;
+		@media screen and(max-width: $moyen_ecran) {
 			width: 100%;
+			overflow: scroll;
+		}
+		@media screen and(max-width: $petit_ecran) {
+			padding: 50;
 		}
 		.triangle {
 			width: 25%;
@@ -40,7 +42,8 @@ body {
 			width: auto;
 			height: auto;
 			display: inline-block;
-			margin-left: 85%;
+			right: 3%;
+			top: 12%;
 			position: absolute;
 			@media screen and(max-width: $moyen_ecran) {
 				display: none;
@@ -49,12 +52,12 @@ body {
 		#croix {
 			@media screen and(min-width: $moyen_ecran) {
 				position: absolute;
-				margin-left: 88%;
 				top: 0;
 				width: 52px;
 				height: 52px;
+				right: 0;
 			}
-			@media screen and(max-width:$moyen_ecran) {
+			@media screen and(max-width: $moyen_ecran) {
 				position: absolute;
 				right: 0;
 				top: 0;
@@ -66,12 +69,16 @@ body {
 			overflow: hidden;
 			clear: both;
 			display: inline-block;
+			float: left;
 			&__nom__atelier {
 				text-transform: uppercase;
 				font-size: 35px;
 				margin: auto;
 				display: block;
 				float: left;
+				@media screen and (max-width: $petit_ecran) {
+					font-size: 23;
+				}
 			}
 			&__niveau {
 				margin-top: 0.5rem;
@@ -84,16 +91,16 @@ body {
 					margin-bottom: 1.2rem;
 				}
 				@media screen and(max-width: $petit_ecran) {
-					margin-bottom: 0.8rem;
+					margin-bottom: 2.8rem;
+					font-size: 20;
 				}
 			}
 			&__prix__petit-ecran {
 				overflow: hidden;
 				clear: both;
-				margin: 0 0 15px;
+				margin: 160 0 15px;
 				display: none;
-				@media screen and (min-width: $moyen_ecran) {
-				}
+				@media screen and (min-width: $moyen_ecran) {}
 				@media screen and(max-width: $moyen_ecran) {
 					display: block;
 					text-align: center;
@@ -134,6 +141,9 @@ body {
 			@media screen and(max-width: $moyen_ecran) {
 				width: 100%;
 			}
+			@media screen and(max-width: $petit_ecran) {
+				margin-top: 40;
+			}
 			&__indiv {
 				width: 33%;
 				display: block;
@@ -158,15 +168,31 @@ body {
 			float: left;
 			width: 100%;
 			text-align: justify;
-			h2{
+			margin-bottom: 60px;
+			h2 {
 				margin-top: 60px;
 			}
 		}
 		.footer {
-			display: inline-block;
-			float: left;
-			margin-top: 60px;
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			margin-top: 100px;
 			width: 100%;
+			margin-bottom: 100;
+			@media screen and(max-width: $petit_ecran){
+				flex-direction: column;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+			}
+			@media (min-width: $petit_ecran) and (max-width: $moyen_ecran) {
+				flex-direction: row;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+			}
 			&__cercle-bloc {
 				@media screen and(min-width: $moyen_ecran) {
 					float: left; //alignement des textes sur grand ecran
@@ -200,8 +226,8 @@ body {
 				color: white;
 				@media screen and(min-width: $moyen_ecran) {
 					float: left; //alignement des textes sur grand ecran
-					margin: 27px auto 0 180;
 					display: inline-block;
+					width: 15%;
 				}
 				@media screen and(max-width: $moyen_ecran) {
 					float: left;
@@ -215,27 +241,26 @@ body {
 				}
 				&__notation {
 					display: inline-block;
+					width: 170px;
+					@media screen and(max-width: $moyen_ecran) {
+						width: 100%;
+					}
 				}
 				&__inscription {
 					background-color: $primary-color;
 					border-radius: 0.5rem;
 					font-weight: bold;
-					padding-top: 0.5rem;
 					width: 140px;
-					align-self: auto;
 					text-transform: uppercase;
-					line-height: 17px;
+					line-height: 30px;
 					text-decoration: none;
 					color: white;
-					@media screen and(max-width: $moyen_ecran) {
-						margin-left: 32%;
-					}
+					display: inline-block;
 				}
 			}
-
 			#footer__icone {
 				display: inline-block;
-				width: 1.3rem;
+				width: 15px;
 				fill: white;
 			}
 		}
