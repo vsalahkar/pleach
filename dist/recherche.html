@@ -1,0 +1,30 @@
+<html> <head> <link rel=stylesheet href=styles/main.css> <meta http-equiv=Content-Type content="text/html; charset=UTF-8"> <title> Meach recherche </title> <script src=http://code.jquery.com/jquery.min.js type=text/javascript></script> </head> <body> <div class=contenu__recherche> <a href=#> <svg version=1.1 id=croix xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink x=0px y=0px viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space=preserve> <style type=text/css>
+					<![CDATA[ .st0 {
+						fill: white;
+					}
+
+					]]>
+				</style> <polygon class=st0 points="340.2,160 255.8,244.3 171.8,160.4 160,172.2 244,256 160,339.9 171.8,351.6 255.8,267.8 340.2,352 352,340.3 267.6,256 352,171.8"></polygon> </svg> </a> <h1 class=contenu__recherche__nom-atelier> Escalade Funny </h1> <div class=contenu__recherche__localisation> <svg version=1.1 id=contenu__recherche__localisation__icone xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink x=0px y=0px width=30px height=30px fill=white viewbox="0 0 512 512" enable-background="new 0 0 512 512" xml:space=preserve> <g> <path d="M256,48c34.19,0,66.334,13.314,90.51,37.49S384,141.81,384,176c0,42.92-24.092,107.127-69.67,185.68 c-22.279,38.396-44.771,71.634-58.332,90.931c-13.518-19.232-35.912-52.327-58.161-90.645C152.149,283.281,128,218.976,128,176 c0-34.19,13.314-66.334,37.49-90.51S221.81,48,256,48 M256,32c-79.529,0-144,64.471-144,144c0,112,144,304,144,304s144-192,144-304 C400,96.471,335.529,32,256,32L256,32z"></path> <path d="M256,112c-35.3,0-64,28.7-64,64s28.7,64,64,64s64-28.7,64-64S291.3,112,256,112z M256,222.9c-25.9,0-46.9-21-46.9-46.9 s21-46.9,46.9-46.9s46.9,21,46.9,46.9S281.9,222.9,256,222.9z"></path> </g> </svg> <div class=contenu__recherche__localisation__texte> <span class=italic> 18 boulevard Jean Jaures, Paris </span> </div> </div> <p class=contenu__recherche__description> Entrainement d'escalade dans la forêt de Fontainebleau. Niveau amateur recommandé. La durée de l'atelier n'est pas encore fixée mais comptez entre 1h30 et 2h. N'hésitez pas à me contacter pour plus d'informations. </p> <div class=contenu__recherche__date> <span class=italic>Mardi 28 juin 2016 - 15h00 </span> </div> <div class=contenu__recherche__progression> Deja 3 inscrits sur 5 </div> <div id=container> <div id=bar-1 class="bar-main-container white"> <div class=wrap> <div class=bar-percentage data-percentage=60></div> <div class=bar-container> <div class=bar></div> </div> </div> </div> </div> <script>
+			$('.bar-percentage[data-percentage]').each(function() {
+				var progress = $(this);
+				var percentage = Math.ceil($(this).attr('data-percentage'));
+				$({
+					countNum: 0
+				}).animate({
+					countNum: percentage
+				}, {
+					duration: 2000,
+					easing: 'linear',
+					step: function() {
+						// What todo on every count
+						var pct = '';
+						if (percentage == 0) {
+							pct = Math.floor(this.countNum) + '%';
+						} else {
+							pct = Math.floor(this.countNum + 1) + '%';
+						}
+						progress.text(pct) && progress.siblings().children().css('width', pct);
+					}
+				});
+			});
+		</script> <div class=contenu__recherche__plus> <a href=file:///C:/Users/Utilisateur/Documents/Meach/Atelier/atelier.html> <span class=italic> Plus d'infos ...</span> </a> </div> <footer class=footer> <a href=# class=footer__cercle-bloc> <div href=# class=footer__cercle> </div> </a> <a href=# class=footer__texte> Audrey </a> <div class="footer__texte footer__texte__notation"> <svg version=1.1 id=footer__icone xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink x=0px y=0px viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space=preserve> <path d=M256,464c114.9,0,208-93.1,208-208c0-114.9-93.1-208-208-208C141.1,48,48,141.1,48,256C48,370.9,141.1,464,256,464z></path> </svg> <svg version=1.1 id=footer__icone xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink x=0px y=0px viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space=preserve> <path d=M256,464c114.9,0,208-93.1,208-208c0-114.9-93.1-208-208-208C141.1,48,48,141.1,48,256C48,370.9,141.1,464,256,464z></path> </svg> <svg version=1.1 id=footer__icone xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink x=0px y=0px viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space=preserve> <path d=M256,464c114.9,0,208-93.1,208-208c0-114.9-93.1-208-208-208C141.1,48,48,141.1,48,256C48,370.9,141.1,464,256,464z></path> </svg> <svg version=1.1 id=footer__icone xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink x=0px y=0px viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space=preserve> <path d=M256,464c114.9,0,208-93.1,208-208c0-114.9-93.1-208-208-208C141.1,48,48,141.1,48,256C48,370.9,141.1,464,256,464z></path> </svg> <svg version=1.1 id=footer__icone xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink x=0px y=0px viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space=preserve> <g> <g> <path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7 c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7 C446.7,361.1,361.1,446.7,256,446.7z"></path> </g> </g> </svg> </div> </footer> </div></body> </html> 

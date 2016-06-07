@@ -7,9 +7,11 @@ body {
 	background-image: url("../images/map.png");
 	color: white;
 	margin: 0;
+
 	.italic {
 		font-style: italic;
 	}
+
 	.messagerie__wrap {
 		#croix {
 			position: relative;
@@ -22,6 +24,7 @@ body {
 				float: right;
 			}
 		}
+
 		.header {
 			display: block;
 			float: right;
@@ -29,6 +32,7 @@ body {
 			@media screen and(max-width: $moyen_ecran) {
 				display: none;
 			}
+
 			&__boite {
 				display: inline-block;
 				float: left;
@@ -36,6 +40,7 @@ body {
 				text-align: center;
 				text-decoration: none;
 			}
+
 			&__boite__proposition {
 				background-color: $secondary-color;
 				text-transform: uppercase;
@@ -47,11 +52,13 @@ body {
 				color: white;
 				line-height: 26px;
 			}
+
 			&__boite__messagerie {
 				text-transform: uppercase;
 				color: $primary-color;
 				font-weight: bold;
 			}
+
 			&__cercle {
 				width: $rayon_cercle;
 				height: $rayon_cercle;
@@ -66,6 +73,7 @@ body {
 				margin: 20px;
 			}
 		}
+
 		.contenu__messagerie {
 			height: auto;
 			background-image: linear-gradient(160deg,rgba(131, 138,182,0.8), rgba(83, 225, 220, 0.8));
@@ -94,6 +102,10 @@ body {
 				height: auto;
 				top: 0;
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 			.en-tete {
 				&__petit {
 					width: 100%;
@@ -101,6 +113,7 @@ body {
 					@media screen and(min-width: $moyen_ecran) {
 						display: none;
 					}
+
 					&__boite {
 						display: inline-block;
 						float: left;
@@ -109,6 +122,7 @@ body {
 						text-align: center;
 						width: 200px;
 					}
+
 					&__boite__proposition {
 						background-color: $secondary-color;
 						text-transform: uppercase;
@@ -121,6 +135,7 @@ body {
 						line-height: 25px;
 						margin-top: 15px;
 					}
+
 					&__boite__messagerie {
 						text-transform: uppercase;
 						font-weight: bold;
@@ -130,6 +145,7 @@ body {
 						margin-top: 15px;
 						color: white;
 					}
+
 					&__cercle {
 						width: $rayon_cercle;
 						height: $rayon_cercle;
@@ -141,6 +157,10 @@ body {
 						display: inline-block;
 						float: right;
 					}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 					#croix {
 						position: relative;
 						float: right;
@@ -148,14 +168,25 @@ body {
 						width: 52px;
 						height: 52px;
 					}
+<<<<<<< HEAD
 					.header {
 						width: 85%;
+=======
+
+					.header {
+						width: 85%;
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 						&__cercle-bloc {
 							float: left; //alignement des textes sur grand ecran
 							display: inline-block;
 							margin-top: 0.3rem;
 							position: relative;
 						}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 						&__cercle {
 							width: $rayon_cercle/2.5;
 							height: $rayon_cercle/2.5;
@@ -168,15 +199,27 @@ body {
 							text-align: center;
 							line-height: 30px;
 						}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 						h1 {
 							font-size: 20px;
 							font-weight: lighter;
 							display: inline-block;
 						}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 						&__messagerie {
 							display: inline-block;
 							float: left;
 						}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 						&__conversation {
 							float: right;
 							display: inline-block;
@@ -184,6 +227,10 @@ body {
 								font-size: 5px;
 							}
 						}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 						&__cercle {
 							width: $rayon_cercle/4;
 							height: $rayon_cercle/4;
@@ -200,14 +247,26 @@ body {
 							margin-right: 25px;
 						}
 					}
+<<<<<<< HEAD
 					.conversation {
 						float: none;
 						display: block;
+=======
+
+					.conversation {
+						float: none;
+						display: block;
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 						&__atelier {
 							margin-top: 30;
 							text-align: justify;
 							display: inline-block;
 							width: 100%;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							&__message_nonlu {
 								display: block;
 								margin-top: 10px;
@@ -218,6 +277,10 @@ body {
 									margin-top: 10px;
 								}
 							}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							&__message_lu {
 								display: block;
 								margin-top: 10px;
@@ -228,6 +291,10 @@ body {
 									margin-top: 10px;
 								}
 							}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							&__cercle-bloc {
 								float: left; //alignement des textes sur grand ecran
 								display: inline-block;
@@ -235,6 +302,10 @@ body {
 									margin-left: 45%;
 								}
 							}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							&__cercle {
 								width: $rayon_cercle/1.5;
 								height: $rayon_cercle/1.5;
@@ -242,6 +313,10 @@ body {
 								-webkit-border-radius: 50%;
 								border-radius: 50%;
 							}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							&__texte {
 								display: inline-block;
 								margin-left: 20px;
@@ -253,6 +328,10 @@ body {
 									margin-top: 15px;
 								}
 							}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							&__cercle-nonlu {
 								width: $rayon_cercle/6;
 								height: $rayon_cercle/6;
@@ -266,28 +345,52 @@ body {
 								margin-right: 2%;
 								margin-top: $rayon_cercle/14;
 							}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							&__nom-atelier {
 								font-weight: bold;
 								font-size: 15;
 							}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 							p {
 								font-size: 13;
 								margin: 0;
 							}
 						}
 					}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 					.vincent {
 						background: url("../images/vincent.jpg");
 						background-size: cover;
 					}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 					.adrien {
 						background: url("../images/adrien.jpg");
 						background-size: cover;
 					}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 					.thomas {
 						background: url("../images/thomas.jpg");
 						background-size: cover;
 					}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f4e6595a103f8b095e94d63a63cac38647a6496
 					.bendo {
 						background: url("../images/bendo.jpg");
 						background-size: cover;
