@@ -1,15 +1,19 @@
 .profil {
     &__layout {
+        display: flex;
         width: 100%;
         height: 80vh;
         background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
         box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-        padding: 4rem 6rem 0;
+        @include resp-padding(4rem, 6rem);
         overflow: visible !important;
         color: $base-color-1;
         font-family: $primary-font;
-        @media #{$large} {
+        top: 0;
+        left: 0;
+        @media #{$under-medium} {
             height: 100vh;
+            flex-direction: column;
         }
     }
 
@@ -20,9 +24,30 @@
         width: 100%;
         height: 80%;
         overflow-y: auto;
+        align-self: center;
+        @media #{$under-medium} {
+            height: 90%;
+            order: 2;
+        }
+
+        .left-part,
+        .right-part,
+        .separation-line {
+            margin: 1rem 0;
+        }
 
         .left-part {
             width: 29%;
+            align-self: center;
+            @media #{$medium-only} {
+                width: 60%;
+            }
+            @media #{$small-only} {
+                width: 70%;
+            }
+            @media #{$small-only} {
+                width: 90%;
+            }
 
             &__history {
                 display: flex;
@@ -32,7 +57,7 @@
                 background-image: url("../images/step.svg");
                 background-repeat: no-repeat;
                 background-size: 0.85rem;
-                background-position: 0.6rem 2.6rem;
+                background-position: 10px 50%;
 
                 &--bar {
                     margin: 0 1rem;
@@ -46,12 +71,12 @@
                     @include resp-padding(.5rem, 2rem);
 
                     .step-title {
-                        @include resp-font(1.6rem);
+                        font-size: 1.6rem;
                         margin-bottom: 0;
                     }
 
                     .step-date {
-                        @include resp-font(1.1rem);
+                        font-size: 1.1rem;
                         margin-top: 0;
                     }
                 }
@@ -59,19 +84,18 @@
                 &--step-btn {
                     display: flex;
                     align-items: center;
-                    flex-grow: 1;
                     min-width: 0.2rem;
                     margin: 0 1rem;
 
                     img {
-                        min-width: 1rem;
+                        min-width: 30px;
                     }
                 }
             }
 
             &__level {
                 &--logo {
-                    @include resp-padding(2rem, 2rem) text-align: center;
+                    @include resp-padding(2rem, 2rem);
 
                     & > img {
                         width: 9rem;
@@ -79,18 +103,52 @@
                         height: auto;
                         display: block;
                         margin: auto;
+                        @media #{$large-only} {
+                            width: 40%;
+                        }
+                        @media #{$under-medium} {
+                            width: 30%;
+                        }
                     }
+                }
+            }
+        }
+
+        .separation-line {
+            max-width: 0.15rem;
+            width: 1%;
+            align-self: center;
+            height: 90%;
+            background-color: transparentize($base-color-1, .6);
+            @media #{$under-medium} {
+                width: 100%;
+                height: 2px;
+                max-width: none;
+                background: none;
+
+                &__horizontal {
+                    max-width: none;
+                    width: 40%;
+                    height: 2px;
+                    margin: auto;
+                    background-color: transparentize($base-color-1, .6);
                 }
             }
         }
 
         .right-part {
             width: 70%;
+            @media #{$under-medium} {
+                width: 90%;
+            }
 
             .commentary {
                 @include resp-padding(1rem, 3rem);
                 display: flex;
                 align-items: center;
+                @media #{$under-small} {
+                    flex-direction: column;
+                }
 
                 &__user {
                     flex-grow: 1;
@@ -126,8 +184,11 @@
                     @include resp-padding(0, 4rem);
 
                     &--paragraph {
-                        @include resp-font(1rem);
+                        font-size: 1rem;
                         text-align: justify;
+                        @media #{$under-medium} {
+                            font-size: 0.9rem;
+                        }
                     }
 
                     &--footer {
@@ -168,42 +229,70 @@
             }
         }
 
-        .footer {
-            width: 100%;
-        }
-
-        .vertical-line {
-            max-width: 0.15rem;
-            width: 1%;
-            align-self: center;
-            height: 90%;
-            background-color: transparentize($base-color-1, .6);
-        }
     }
 
     &__footer {
         width: 100%;
         display: flex;
         position: absolute;
-        bottom: 1rem;
+        bottom: -4rem;
+        left: 0;
         align-items: center;
-        height: 4rem;
-        @media #{$large} {
-            display: none;
+        text-align: center;
+        @media #{$under-medium} {
+            display: block;
+            order: 1;
+            position: static;
+            bottom: auto;
+            left: auto;
+        }
+        @media #{$large-only} {
+            bottom: -3.5rem;
+        }
+
+        &::before {
+            content: '';
+            display: table;
         }
 
         .footer__social {
             margin: 0 1.5rem;
-            text-align: center;
+            @media #{$under-medium} {
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+                text-align: center;
+            }
 
-            &--fb,
-            &--ig,
-            &--tw {
-                padding: 1.5rem;
-
+            a {
                 img {
+                    margin: 1.5rem;
                     width: 3rem;
+                    @media #{$under-large} {
+                        width: 2.2rem;
+                    }
                 }
+            }
+        }
+
+        .footer__half-circle {
+            width: 15rem;
+            height: 7.5rem;
+            background-image: -webkit-linear-gradient(305deg, rgba(128, 185, 193, 0.8), rgba(131, 195, 206, 0.8));
+            background-image: linear-gradient(145deg, rgba(128, 185, 193, 0.8), rgba(131, 195, 206, 0.8));
+            position: absolute;
+            left: 21.45rem;
+            bottom: -3.5rem;
+            border-radius: 0 0 15rem 15rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            @media #{$large-only} {
+                width: 12rem;
+                height: 6rem;
+                left: 306px;
+                bottom: -40px;
+            }
+            @media #{$under-medium} {
+                display: none;
             }
         }
 
@@ -214,30 +303,35 @@
             display: inline-block;
             overflow: hidden;
             border-radius: 50%;
-            bottom: -2rem;
+            bottom: -2.4rem;
             margin: 0 1.5rem;
-            box-shadow: 0 2px 4px 10px rgba(125, 205, 211, 0.83), 0 10px 6px 9px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            @media #{$large-only} {
+                width: 10rem;
+                height: 10rem;
+                bottom: -1.5rem;
+            }
+            @media #{$under-medium} {
+                min-width: 5rem;
+                min-height: 5rem;
+                width: 5rem;
+                height: 5rem;
+                bottom: auto;
+                vertical-align: middle;
+                text-align: left;
+            }
 
             img {
                 width: auto;
                 max-height: 100%;
                 position: absolute;
-                box-shadow: 0 0 0 10px lightblue, 0 0 5px 10px black;
-            }
-        }
-
-        .footer__rating-average {
-            display: flex;
-            align-items: center;
-
-            p {
-                display: inline-block;
-                margin: 0 1.5rem;
-                @include resp-font(1.5rem);
             }
         }
 
         .footer__profil-name {
+            width: max-content;
+            display: inline-block;
+            vertical-align: middle;
+
             h4 {
                 text-transform: uppercase;
                 font-weight: bolder;
@@ -245,6 +339,20 @@
                 margin: 0 1.5rem;
             }
         }
+
+        .footer__rating-average {
+            width: max-content;
+            display: inline-block;
+            vertical-align: middle;
+
+            p {
+                display: inline-block;
+                margin: 0 1.5rem;
+                @include resp-font(1.5rem);
+                vertical-align: super;
+            }
+        }
+
     }
 
     .close-btn {
