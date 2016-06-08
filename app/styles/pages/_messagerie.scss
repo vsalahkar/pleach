@@ -10,7 +10,7 @@ $grand_ecran: '1440px';
 		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
 		padding: 100px;
 		box-shadow: 3px 3px 50px grey;
-		@media screen and(max-width: 1280px){
+		@media screen and(max-width: 1380px){
 			padding: 50;
 		}
 		@media screen and(max-width: $moyen_ecran) {
