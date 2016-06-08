@@ -5,7 +5,8 @@
     margin: auto;
     display: flex;
     box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-    @media #{$large} {
+    border-radius: 0 5px 5px 0;
+    @media #{$under-large} {
         display: block;
         box-shadow: none;
     }
@@ -15,7 +16,7 @@
     &__rayon {
         flex-grow: 3;
         text-align: center;
-        @media #{$large} {
+        @media #{$under-large} {
             width: 100%;
             margin-top: 1rem;
             box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
@@ -27,15 +28,17 @@
             width: 100%;
             padding: 0 1rem;
             color: $primary-color;
-            @media #{$large} {
-                border-radius: 5px;
+            @media #{$under-large} {
+                border-radius: 5px !important;
             }
         }
     }
 
-    #address {
-        @media (min-width: 1024px) {
+    &__address {
+        .address {
             border-radius: 5px 0 0 5px;
+        }
+        @media #{$over-large} {
             border-right: 1px solid $primary-color !important;
         }
     }
