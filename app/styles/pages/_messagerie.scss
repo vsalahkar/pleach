@@ -9,6 +9,9 @@ $grand_ecran: '1440px';
 		width: 40%;
 		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
 		padding: 70px;
+		@media screen and(max-width: $moyen_ecran){
+			width: 100%;
+		}
 
 		#croix {
 			height: 4rem;
@@ -44,6 +47,7 @@ $grand_ecran: '1440px';
 		.conversation {
 			&__atelier {
 				margin-top: 50px;
+				margin-bottom: 70px;
 				text-align: justify;
 
 				&__picture {
@@ -62,7 +66,7 @@ $grand_ecran: '1440px';
 				}
 
 				&__texte {
-					&__nonlu {
+					&__nonlu{
 							display: flex;
 							align-content: center;
 							align-items: center;
@@ -84,13 +88,28 @@ $grand_ecran: '1440px';
 							font-weight: bold;
 						}
 					}
+					&__lu{
+						display: flex;
+						align-content: center;
+						align-items: center;
+						padding-left: 30px;
+						&__nom-atelier{
+							font-weight: bold;
+						}
+					}
 				}
 				&__message {
 					display: flex;
 					align-content: center;
 					align-items: center;
 					padding-left: 30px;
+					text-decoration: none;
+					a{
+						text-decoration: none;
+						color: white;
+					}
 				}
+
 			}
 		}
 	}
