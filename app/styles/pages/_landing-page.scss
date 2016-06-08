@@ -4,6 +4,8 @@
         height: 100vh;
         background-color: transparentize($primary-color, .2);
         @include resp-padding(5rem, 5rem);
+        top: 0;
+        left: 0;
     }
 
     .triangle-up-left {
