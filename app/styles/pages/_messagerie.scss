@@ -30,8 +30,10 @@ $grand_ecran: '1440px';
 
 		.en-tete__conversation {
 			display: flex;
-			font-size: 22;
+			font-size: 35;
 			flex-wrap: wrap;
+			text-transform: uppercase;
+			align-items: center;
 			@media screen and(max-width: $petit_ecran) {
 				font-size: 18;
 			}
@@ -39,6 +41,9 @@ $grand_ecran: '1440px';
 			&__nb_conversation {
 				flex: 1;
 				text-align: center;
+				font-size: 22;
+				text-transform: none;
+				font-style: italic;
 			}
 
 			&__cercle {
