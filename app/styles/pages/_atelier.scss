@@ -88,7 +88,8 @@ $rayon_cercle: 80px;
 				}
 			}
 
-			.en-tete__prix__petit-ecran {
+			.prix__petit-ecran {
+				width: 100%;
 				overflow: hidden;
 				clear: both;
 				display: none;
@@ -102,7 +103,7 @@ $rayon_cercle: 80px;
 
 				.trait {
 					@media screen and(min-width: $moyen_ecran) {
-						visibility: hidden;
+						display: none;
 						height: 0;
 						width: 0;
 					}
@@ -127,36 +128,24 @@ $rayon_cercle: 80px;
 			}
 
 			.icone-bloc {
-				display: inline-block;
-				float: none;
-				width: 100%;
-				margin-top: 70px;
-				@media screen and(max-width: $moyen_ecran) {
-					width: 100%;
+				margin-top: 30px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: baseline;
+				text-align: center;
+				@media screen and(max-width: $petit_ecran) {
+flex-direction: column;
+align-items: center;
 				}
 				@media screen and(max-width: $petit_ecran) {
 					margin-top: 40;
 				}
 
 				&__indiv {
-					width: 33%;
-					display: block;
-					float: left;
 					@media screen and(max-width: $petit_ecran) {
-						float: none;
-						width: 100%;
-						margin-top: 1rem;
+						margin-top: 20px;
 					}
-				}
-
-				#icone-bloc__icone {
-					margin: auto;
-					display: block;
-				}
-
-				&__texte {
-					display: block;
-					text-align: center;
 				}
 			}
 
@@ -179,18 +168,11 @@ $rayon_cercle: 80px;
 				justify-content: center;
 				margin-top: 100px;
 				width: 100%;
-				margin-bottom: 100;
 				@media screen and(max-width: $petit_ecran) {
 					flex-direction: column;
-					align-content: center;
-					justify-content: center;
-					align-items: center;
 				}
 				@media (min-width: $petit_ecran) and (max-width: $moyen_ecran) {
 					flex-direction: row;
-					align-content: center;
-					justify-content: center;
-					align-items: center;
 				}
 
 				&__cercle-bloc {
