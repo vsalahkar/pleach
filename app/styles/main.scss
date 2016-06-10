@@ -1,6 +1,7 @@
 @import "variables";
 //__helpers
 @import "helpers/mixin";
+@import "helpers/useful_classes";
 //__pages
 @import "pages/landing-page";
 @import "pages/profil";
@@ -51,8 +52,6 @@ body {
         &__layout {
             position: fixed;
             overflow: auto;
-            top: 0;
-            left: 0;
         }
     }
 }

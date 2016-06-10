@@ -14,5 +14,10 @@ $small-only: "(max-width: 640px)";
 $medium-only: "(min-width: 640px) and (max-width: 1024px)";
 $large-only: "(min-width: 1024px) and (max-width: 1440px)";
 
-$medium: "(max-width: 640px)";
-$large: "(max-width: 1024px)";
+$under-small: "(max-width: 640px)";
+$under-medium: "(max-width: 1024px)";
+$under-large: "(max-width: 1440px)";
+
+$over-small: "(min-width: 640px)";
+$over-medium: "(min-width: 1024px)";
+$over-large: "(min-width: 1440px)";
