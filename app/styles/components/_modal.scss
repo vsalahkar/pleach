@@ -1,0 +1,56 @@
+.modal {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: transparentize($base-color-2, .3);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__connexion {
+        width: 30%;
+        background: transparentize($base-color-1, .2);
+        border-radius: 10px;
+        @include resp-padding(2rem, 2rem);
+
+        &--header {
+            h4 {
+                text-align: center;
+                @include resp-font(1.5rem);
+                color: $base-color-2;
+            }
+        }
+
+        &--fb-btn {
+            background-color: #355c9a;
+        }
+
+        &--goo-btn {
+            background-color: #e14c35;
+        }
+
+        &--fb-btn,
+        &--goo-btn {
+            @include resp-margin(1rem, 2rem);
+            @include resp-padding(0, 1rem);
+            width: 60%;
+            justify-content: flex-start;
+            display: flex;
+            align-items: center;
+            margin: 1rem auto;
+            border-radius: 5px;
+
+            img {
+                width: 3rem;
+            }
+
+            h5 {
+                display: inline-block;
+                margin: 1rem;
+            }
+        }
+    }
+}
