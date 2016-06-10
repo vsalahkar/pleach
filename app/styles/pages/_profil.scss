@@ -238,16 +238,20 @@
         bottom: -4rem;
         left: 0;
         align-items: center;
-        text-align: center;
         @media #{$under-medium} {
-            display: block;
+            display: flex;
             order: 1;
             position: static;
             bottom: auto;
             left: auto;
+            align-items: center;
+            justify-content: center;
         }
         @media #{$large-only} {
             bottom: -3.5rem;
+        }
+        @media #{$under-small} {
+            flex-direction: column;
         }
 
         &::before {
@@ -266,7 +270,7 @@
 
             a {
                 img {
-                    margin: 1.5rem;
+                    @include resp-margin(1.5rem, 1.5rem);
                     width: 3rem;
                     @media #{$under-large} {
                         width: 2.2rem;
@@ -281,19 +285,26 @@
             background-image: -webkit-linear-gradient(305deg, rgba(128, 185, 193, 0.8), rgba(131, 195, 206, 0.8));
             background-image: linear-gradient(145deg, rgba(128, 185, 193, 0.8), rgba(131, 195, 206, 0.8));
             position: absolute;
-            left: 21.45rem;
+            left: 22rem;
             bottom: -3.5rem;
             border-radius: 0 0 15rem 15rem;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             @media #{$large-only} {
                 width: 12rem;
                 height: 6rem;
-                left: 306px;
+                left: 271px;
                 bottom: -40px;
             }
-            @media #{$under-medium} {
-                display: none;
-            }
+        }
+
+        .footer__profil {
+            width: fit-content;
+            text-align: center;
+        }
+
+        .footer__profil-info {
+            width: fit-content;
+            text-align: center;
         }
 
         .footer__profil-picture {
@@ -310,14 +321,17 @@
                 height: 10rem;
                 bottom: -1.5rem;
             }
+            @media #{$medium-only} {
+                width: 7rem;
+                height: 7rem;
+            }
             @media #{$under-medium} {
-                min-width: 5rem;
-                min-height: 5rem;
-                width: 5rem;
-                height: 5rem;
+                display: block;
                 bottom: auto;
-                vertical-align: middle;
+                margin: auto;
                 text-align: left;
+                max-width: 5rem;
+                max-height: 5rem;
             }
 
             img {
@@ -330,7 +344,9 @@
         .footer__profil-name {
             width: max-content;
             display: inline-block;
-            vertical-align: middle;
+            @media #{$under-medium} {
+                margin: 1rem 0;
+            }
 
             h4 {
                 text-transform: uppercase;

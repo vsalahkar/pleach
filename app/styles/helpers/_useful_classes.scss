@@ -1,0 +1,31 @@
+.visible {
+    &-small {
+        display: none !important;
+        @media #{$under-small} {
+            display: block !important;
+        }
+    }
+
+    &-medium {
+        display: none !important;
+        @media #{$under-medium} {
+            display: block !important;
+        }
+    }
+}
+
+.hidden {
+    &-medium {
+        display: block !important;
+        @media #{$under-medium} {
+            display: none !important;
+        }
+    }
+}
+
+.separation-line {
+    width: 20%;
+    margin: 1rem auto;
+    height: 2px;
+    background-color: transparentize($base-color-1, .6);
+}
