@@ -1,0 +1,77 @@
+$rayon_cercle: 80px;
+$petit_ecran: '640px';
+$moyen_ecran: '1040px';
+$grand_ecran: '1440px';
+
+.message {
+
+	&__layout {
+		height: 100vh;
+		width: 40%;
+		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
+		padding: 50px;
+		box-shadow: 3px 3px 50px grey;
+		@media screen and(max-width: 1240px){
+			width: 60%;
+		}
+		@media screen and(max-width: 870px) {
+			width: 80%;
+			padding: 70;
+		}
+		@media screen and(max-width: $petit_ecran){
+			width: 100%;
+			padding: 50;
+		}
+	}
+
+    .en-tete__message {
+
+        text-transform: uppercase;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        height: 100px;
+
+            &__precedent-btn {
+                flex-grow: 1;
+            }
+
+            &__title {
+                flex-grow: 1;
+                font-size: 30;
+                text-align: center;
+            }
+
+            &__linker {
+                flex-grow: 1;
+            }
+
+            &__date {
+                flex-grow: 1;
+                font-size: 25;
+
+            }
+    }
+
+    .rediger {
+        width: 100%;
+        bottom: 40px;
+        position: absolute;
+
+    }
+
+    input.rediger__input {
+
+        background: none;
+        border-radius: 5px;
+        padding: 10px;
+        border: solid 1px #fff;
+        width: 80%;
+
+    }
+
+    ::-webkit-input-placeholder {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+    }
+}

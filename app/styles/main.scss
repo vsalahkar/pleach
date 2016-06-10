@@ -8,6 +8,7 @@
 @import "pages/atelier";
 @import "pages/messagerie";
 @import "pages/recherche";
+@import "pages/conversation";
 //__components
 @import "components/search-form";
 @import "components/btn";
@@ -47,6 +48,16 @@ body {
     .landing-page,
     .profil,
     .messagerie {
+        position: absolute;
+
+        &__layout {
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            left: 0;
+        }
+    }
+    .message {
         position: absolute;
 
         &__layout {
