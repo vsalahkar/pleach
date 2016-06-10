@@ -8,16 +8,17 @@ $grand_ecran: '1440px';
 		height: 100vh;
 		width: 40%;
 		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
-		padding: 100px;
+		padding: 50px;
 		box-shadow: 3px 3px 50px grey;
-		@media screen and(max-width: 1380px){
-			padding: 50;
+		@media screen and(max-width: 1240px){
+			width: 60%;
 		}
-		@media screen and(max-width: $moyen_ecran) {
-			width: 100%;
+		@media screen and(max-width: 870px) {
+			width: 80%;
 			padding: 70;
 		}
 		@media screen and(max-width: $petit_ecran){
+			width: 100%;
 			padding: 50;
 		}
 
@@ -44,6 +45,10 @@ $grand_ecran: '1440px';
 				font-size: 22;
 				text-transform: none;
 				font-style: italic;
+				@media screen and(max-width: $petit_ecran) {
+					font-size: 15;
+				}
+
 			}
 
 			&__cercle {
@@ -56,14 +61,14 @@ $grand_ecran: '1440px';
 				text-align: center;
 				display: inline-block;
 				line-height: 27px;
-				margin-right: 30px;
+				margin-right: 20px;
 				font-size: 15;
+				font-weight: bold;
 			}
 		}
 
 		.conversation {
-			margin-top: 50px;
-			margin-bottom: 70px;
+			margin-top: 40px;
 			text-align: justify;
 			display: flex;
 			align-items: center;
@@ -72,8 +77,8 @@ $grand_ecran: '1440px';
 			}
 
 			&__photo {
-				width: 5rem;
-				height: 5rem;
+				width: 4rem;
+				height: 4rem;
 				display: inline-block;
 				position: relative;
 				overflow: hidden;
@@ -85,7 +90,7 @@ $grand_ecran: '1440px';
 					max-height: 100%;
 				}
 				@media screen and(max-width: $petit_ecran) {
-					margin-bottom: 20px;
+					margin-right: 0;
 				}
 			}
 
@@ -105,7 +110,7 @@ $grand_ecran: '1440px';
 
 			&__nom {
 				font-weight: bold;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 			}
 
 			&__message {
