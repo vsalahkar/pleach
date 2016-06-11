@@ -1,8 +1,3 @@
-$rayon_cercle: 80px;
-$petit_ecran: '640px';
-$moyen_ecran: '1040px';
-$grand_ecran: '1440px';
-
 .message {
 
 	&__layout {
@@ -30,7 +25,7 @@ $grand_ecran: '1440px';
         font-style: italic;
         display: flex;
         align-items: center;
-        height: 100px;
+
 
             &__precedent-btn {
                 flex-grow: 1;
@@ -55,18 +50,22 @@ $grand_ecran: '1440px';
 
     .rediger {
         width: 100%;
-        bottom: 40px;
-        position: absolute;
+        bottom: 0px;
+				display: flex;
+				position: absolute;
 
-    }
+						&__input {
+							background: none;
+							border-radius: 5px;
+							padding: 10px;
+							border: solid 1px #fff;
+							width: 100%;
+							flex-grow: 1;
+						}
 
-    input.rediger__input {
-
-        background: none;
-        border-radius: 5px;
-        padding: 10px;
-        border: solid 1px #fff;
-        width: 80%;
+						&__btn {
+							flex-grow: 1;
+						}
 
     }
 
