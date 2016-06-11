@@ -48,23 +48,62 @@
             }
     }
 
+	.discussion {
+
+			height: 90%;
+			width: 100%;
+
+			&__messageA {
+
+					&__photo {
+
+					}
+
+					&__contenu {
+
+					}
+
+					&__heure {
+
+					}
+			}
+
+			&__messageB {
+
+					&__photo {
+
+					}
+
+					&__contenu {
+
+					}
+
+					&__heure {
+
+					}
+			}
+	}
+
     .rediger {
         width: 100%;
-        bottom: 0px;
-				display: flex;
-				position: absolute;
+		display: flex;
 
-						&__input {
-							background: none;
-							border-radius: 5px;
-							padding: 10px;
-							border: solid 1px #fff;
-							width: 100%;
-							flex-grow: 1;
-						}
+				&__input {
+					background: none;
+					padding: 10px;
+					border: solid 1px #fff;
+					width: 100%;
+					flex-grow: 1;
+					border-bottom-left-radius: 5px;
+					border-top-left-radius: 5px;
+				}
 
 						&__btn {
 							flex-grow: 1;
+							background: #838ab6;
+							border-bottom-right-radius: 5px;
+							border-top-right-radius: 5px;
+							padding: 2%;
 						}
 
     }
