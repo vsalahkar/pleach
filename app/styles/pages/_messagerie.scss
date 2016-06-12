@@ -1,7 +1,4 @@
 $rayon_cercle: 80px;
-$petit_ecran: '640px';
-$moyen_ecran: '1024px';
-$grand_ecran: '1440px';
 
 .messagerie {
 	&__layout {
@@ -17,7 +14,7 @@ $grand_ecran: '1440px';
 			width: 80%;
 			padding: 70;
 		}
-		@media screen and(max-width: $petit_ecran){
+		@media #{$small-only} {
 			width: 100%;
 			padding: 50;
 		}
@@ -35,7 +32,7 @@ $grand_ecran: '1440px';
 			flex-wrap: wrap;
 			text-transform: uppercase;
 			align-items: center;
-			@media screen and(max-width: $petit_ecran) {
+			@media #{$small-only} {
 				font-size: 18;
 			}
 
@@ -45,7 +42,7 @@ $grand_ecran: '1440px';
 				font-size: 22;
 				text-transform: none;
 				font-style: italic;
-				@media screen and(max-width: $petit_ecran) {
+				@media #{$small-only} {
 					font-size: 15;
 				}
 
@@ -53,7 +50,6 @@ $grand_ecran: '1440px';
 
 			&__cercle {
 				width: $rayon_cercle/3;
-				height: $rayon_cercle/3;
 				-moz-border-radius: 50%;
 				-webkit-border-radius: 50%;
 				border-radius: 50%;
@@ -72,7 +68,7 @@ $grand_ecran: '1440px';
 			text-align: justify;
 			display: flex;
 			align-items: center;
-			@media screen and(max-width: $petit_ecran) {
+			@media #{$small-only} {
 				flex-direction: column;
 			}
 
@@ -89,7 +85,7 @@ $grand_ecran: '1440px';
 					width: auto;
 					max-height: 100%;
 				}
-				@media screen and(max-width: $petit_ecran) {
+				@media #{$small-only} {
 					margin-right: 0;
 				}
 			}

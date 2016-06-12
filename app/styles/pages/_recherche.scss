@@ -1,7 +1,4 @@
 $rayon_cercle: 80px;
-$petit_ecran: '640px';
-$moyen_ecran: '1024px';
-$grand_ecran: '1440px';
 
 .recherche {
 	&__layout {
@@ -20,7 +17,7 @@ $grand_ecran: '1440px';
 			width: 80%;
 			padding: 70;
 		}
-		@media screen and(max-width: $petit_ecran) {
+		@media #{$small-only}{
 			width: 100%;
 			padding: 50;
 		}
@@ -49,8 +46,9 @@ $grand_ecran: '1440px';
 				flex-wrap: wrap;
 				text-transform: uppercase;
 				align-items: center;
-				@media screen and (max-width: $petit_ecran) {
+				@media #{$small-only}{
 					font-size: 23;
+					margin-bottom: 30px;
 				}
 			}
 		}
@@ -60,6 +58,9 @@ $grand_ecran: '1440px';
 			flex-wrap: wrap;
 			align-items: center;
 			font-style: italic;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
 
 			svg{
 
@@ -71,16 +72,24 @@ $grand_ecran: '1440px';
 
 		.description {
 			text-align: justify;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
 		}
 
 		.date {
 			font-style: italic;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
 		}
 
 		.plus {
 			text-decoration: none;
 			color: white;
 			font-style: italic;
+			@media #{$small-only}{
+			}
 		}
 		.progression{
 			height: 15px;
@@ -88,6 +97,9 @@ $grand_ecran: '1440px';
 			border-radius: 15px;
 			margin-top: 20px;
 			overflow: hidden;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
 		}
 		.bar{
 			background-color: #fff;
@@ -99,8 +111,8 @@ $grand_ecran: '1440px';
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
-			@media screen and(max-width: 690px) {
-				margin-top: 50px;
+			@media #{$small-only}{
+				margin-top: 30px;
 			}
 
 			&__professeur {

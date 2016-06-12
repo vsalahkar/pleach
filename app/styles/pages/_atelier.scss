@@ -1,7 +1,3 @@
-// Variables
-$petit_ecran: '640px';
-$moyen_ecran: '1040px';
-$grand_ecran: '1440px';
 $rayon_cercle: 80px;
 
 .atelier {
@@ -15,7 +11,7 @@ $rayon_cercle: 80px;
 		box-shadow: 3px 3px 50px grey;
 		overflow-y: auto;
 		overflow-x: hidden;
-		@media screen and(max-width: $moyen_ecran) {
+		@media #{$large} {
 			width: 100%;
 		}
 		@media screen and(max-width: 690px) {
@@ -97,12 +93,12 @@ $rayon_cercle: 80px;
 			}
 
 			.trait {
-				@media screen and(min-width: $moyen_ecran) {
+				@media #{$large-only} {
 					display: none;
 					height: 0;
 					width: 0;
 				}
-				@media screen and(max-width: $moyen_ecran) {
+				@media #{$large} {
 					height: 0.1rem;
 					width: 100%;
 					visibility: visible;
@@ -111,10 +107,10 @@ $rayon_cercle: 80px;
 			}
 
 			&__texte {
-				@media screen and(min-width: $moyen_ecran) {
+				@media #{$large-only} {
 					display: none;
 				}
-				@media screen and(max-width: $moyen_ecran) {
+				@media #{$large} {
 					text-align: center;
 					font-size: 150%;
 				}
