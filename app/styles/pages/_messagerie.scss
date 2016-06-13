@@ -1,14 +1,23 @@
 $rayon_cercle: 80px;
-$petit_ecran: '640px';
-$moyen_ecran: '1040px';
-$grand_ecran: '1440px';
 
 .messagerie {
 	&__layout {
 		height: 100vh;
 		width: 40%;
 		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
-		padding: 70px;
+		padding: 50px;
+		box-shadow: 3px 3px 50px grey;
+		@media screen and(max-width: 1240px){
+			width: 60%;
+		}
+		@media screen and(max-width: 870px) {
+			width: 80%;
+			padding: 70;
+		}
+		@media #{$small-only} {
+			width: 100%;
+			padding: 50;
+		}
 
 		#croix {
 			height: 4rem;
@@ -17,80 +26,94 @@ $grand_ecran: '1440px';
 			position: absolute;
 		}
 
-		.en-tete {
-			&__petit {
-				display: none;
+		.en-tete__conversation {
+			display: flex;
+			font-size: 30;
+			flex-wrap: wrap;
+			text-transform: uppercase;
+			align-items: center;
+			@media #{$small-only} {
+				font-size: 18;
 			}
 
-			&__toujours {
-				display: flex;
-				align-content: center;
-				align-items: center;
-				justify-content: space-around;
-
-				&__cercle {
-					width: $rayon_cercle/3;
-					height: $rayon_cercle/3;
-					-moz-border-radius: 50%;
-					-webkit-border-radius: 50%;
-					border-radius: 50%;
-					background: $secondary-color;
-					background-size: cover;
-					text-align: center;
+			&__nb_conversation {
+				flex: 1;
+				text-align: center;
+				font-size: 22;
+				text-transform: none;
+				font-style: italic;
+				@media #{$small-only} {
+					font-size: 15;
 				}
+
+			}
+
+			&__cercle {
+				width: $rayon_cercle/3;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: $secondary-color;
+				text-align: center;
+				display: inline-block;
+				line-height: 27px;
+				margin-right: 20px;
+				font-size: 15;
+				font-weight: bold;
 			}
 		}
 
 		.conversation {
-			&__atelier {
-				margin-top: 50px;
-				text-align: justify;
+			margin-top: 40px;
+			text-align: justify;
+			display: flex;
+			align-items: center;
+			@media #{$small-only} {
+				flex-direction: column;
+			}
 
-				&__picture {
-					width: 5rem;
-					height: 5rem;
-					margin: auto;
-					display: inline-block;
-					position: relative;
-					overflow: hidden;
-					border-radius: 50%;
-					float: left;
-					img {
-						width: auto;
-						max-height: 100%;
-					}
-				}
+			&__photo {
+				width: 4rem;
+				height: 4rem;
+				display: inline-block;
+				position: relative;
+				overflow: hidden;
+				border-radius: 50%;
+				margin-right: 30px;
 
-				&__texte {
-					&__nonlu {
-							display: flex;
-							align-content: center;
-							align-items: center;
-							padding-left: 30px;
-						&__cercle {
-							width: 20px;
-							height: 20px;
-							position: relative;
-							overflow: hidden;
-							border-radius: 50%;
-							background: $secondary-color;
-							flex-direction: row;
-							display: flex;
-						}
-						&__nom-atelier {
-							flex-direction: row;
-							display: flex;
-							margin-left: 20px;
-							font-weight: bold;
-						}
-					}
+				img {
+					width: auto;
+					max-height: 100%;
 				}
-				&__message {
-					display: flex;
-					align-content: center;
-					align-items: center;
-					padding-left: 30px;
+				@media #{$small-only} {
+					margin-right: 0;
 				}
+			}
+
+			&__texte {}
+
+			&__nonlu {
+				width: $rayon_cercle/4;
+				height: $rayon_cercle/4;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: $secondary-color;
+				margin-right: 15px;
+				display: inline-block;
+				vertical-align: sub;
+			}
+
+			&__nom {
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			&__message {
+				display: flex;
+				align-content: center;
+				align-items: center;
+				text-decoration: none;
 			}
 		}
 	}

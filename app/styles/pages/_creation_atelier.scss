@@ -1,70 +1,22 @@
-$rayon_cercle: 75px;
-$petit_ecran: '640px';
-$moyen_ecran: '1040px';
-$grand_ecran: '1440px';
-
-body {
-	font-family: 'Open Sans', sans-serif;
-	background-image: url("map.png");
-	margin: 0;
-	.header {
-		display: block;
-		float: right;
-		&__boite {
-			display: inline-block;
-			float: left;
-			margin: $rayon_cercle/1.5 20px 0;
-			text-align: center;
-			text-decoration: none;
-		}
-		&__boite__proposition {
-			background-color: $secondary-color;
-			text-transform: uppercase;
-			width: 200px;
-			border-radius: 50px;
-			height: 25px;
-			box-shadow: 2px 2px $primary-color;
-			font-weight: bold;
-			color: white;
-			line-height: 26px;
-		}
-		&__boite__messagerie {
-			text-transform: uppercase;
-			color: $primary-color;
-			font-weight: bold;
-		}
-		&__cercle {
-			width: $rayon_cercle;
-			height: $rayon_cercle;
-			-moz-border-radius: 50%;
-			-webkit-border-radius: 50%;
-			border-radius: 50%;
-			background: url("../images/vincent.jpg");
-			background-size: cover;
-			text-align: center;
-			display: inline-block;
-			float: right;
-			margin: 20px;
-		}
-	}
-	.contenu__creation {
-		background-image: linear-gradient(160deg,rgba(131, 138,182,0.8), rgba(83, 225, 220, 0.8));
-		display: inline-block;
+.creation {
+	&__layout {
+		height: 100vh;
 		width: 40%;
-		height: 350px;
+		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
+		top: 0;
+		box-shadow: 3px 3px 50px grey;
 		position: absolute;
-		right: 0;
-		bottom: 0;
-		box-shadow: 3px 3px 3px grey;
-		position: absolute;
-		padding: 15 30 25 30;
-		@media screen and(min-width: $grand_ecran) {
-			width: 30%;
-			height: 400px;
+		padding: 50;
+		overflow-y: auto;
+		@media screen and(max-width: 870px) {
+			width: 80%;
+			padding: 70;
 		}
-		@media screen and(max-width: $petit_ecran) {
+		@media #{$small-only} {
 			width: 100%;
+			padding: 50;
 		}
+
 		#croix {
 			z-index: 99999999999;
 			width: 52px;
@@ -72,103 +24,95 @@ body {
 			display: inline-block;
 			position: absolute;
 			right: 0;
-			top:0;
-			@media screen and(max-width: $petit_ecran) {
+			top: 0;
+			@media #{$small-only} {
 				width: 42px;
 				height: 42px;
 			}
 		}
-		&__en-tete {
-			display: block;
-			overflow: hidden;
-			clear: both;
-			height: auto;
-			&__texte {
-				font-weight: normal;
-				text-transform: uppercase;
-				display: inline-block;
-				font-size: 25;
-				position: relative;
-				float: none;
-				margin: 0;
-				@media screen and(max-width: $moyen_ecran) {
-					font-size: 20;
+
+		.steps {
+			margin: 40px 0;
+			background: #fff;
+			height: 1px;
+			border-radius: 2px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			.step {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #FFF;
+				// background-color: transparent;
+				border: solid 1px #fff;
+
+				&--done {
+					background: $primary-color;
 				}
 			}
 		}
-		&__formulaire__f1,
-		&__formulaire__f2 {
-			display: block;
-			width: 100%;
-			input {
-				background-color: rgba(108, 129, 164, 0.8);
-				border: none;
-				box-shadow: 2px 2px 2px grey;
+
+		form {
+			padding: 0;
+			margin: 40px 0;
+
+			.input-group {
+				margin-bottom: 30px;
+			}
+
+			input[type="date"],
+			input[type="text"],
+			select,
+			textarea {
+				outline: 0;
+				background: none;
 				border-radius: 5px;
-				text-align: center;
-				height: 25px;
-				margin: 15 4 10 4;
-				color: white;
+				width: 100%;
+				padding: 10px;
+				border: solid 1px #fff;
+				resize: none;
+				color: #fff;
+				margin-top: 10px;
+				transition: all 0.3s;
 			}
-			#description,
-			#niveau,
-			#theme,
-			#titre,#localisation {
-				width: 420;
-				display: block;
-				margin: auto;
+
+			.inputs {
+				display: flex;
+
+				input[type="radio"] {
+					flex: 1;
+					margin-left: 20px;
+					outline: 0;
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+
+				.input-group:first-child {
+					margin-right: 25px;
+				}
 			}
-			#description {
-				height: 136;
-				display: block;
-				margin: auto;
-			}
-			#date,
-			#horaire,
-			#duree,#participant,
-			#tarif,
-			#telephone {
-				display: block;
-				float: none;
-				width: 250px;
-				margin: auto;
-			}
-			.form-group{
-				margin: 11 11 11 11;
-			}
-			&__remplir {
-				display: block;
-			}
-			&__footer {
-				display: inline-block;
-			}
-			.footer__continuer {
-				background-color: $secondary-color;
-				box-shadow: 2px 2px 2px grey;
-				width: 165px;
-				height: 30px;
-				text-align: center;
+		}
+
+		.end-form {
+			text-align: center;
+
+			.button {
+				background-color: $primary-color;
+				padding: 10px;
 				border-radius: 5px;
 				text-transform: uppercase;
-				font-weight: bold;
-				line-height: 31px;
-				color: white;
-				display: inline-block;
-				margin: 15px 0 0 7px;
-				position: relative;
-				text-decoration: none;
 			}
-			#footer__progression__icone {
-				display: inline-block;
-				width: 1.5rem;
-				height: 1.5rem;
-				fill: white;
-			}
-			.footer__progression {
-				position: relative;
-				display: inline-block;
-				margin-top: 15px;
-				float: right;
+		}
+
+		.en-tete {
+			font-size: 30;
+			text-transform: uppercase;
+			@media #{$small-only} {
+				font-size: 23;
 			}
 		}
 	}
