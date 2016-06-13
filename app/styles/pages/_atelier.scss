@@ -1,0 +1,224 @@
+$rayon_cercle: 80px;
+
+.atelier {
+	&__layout {
+		height: 100vh;
+		width: 80%;
+		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
+		top: 0;
+		position: absolute;
+		padding: 70 100;
+		box-shadow: 3px 3px 50px grey;
+		overflow-y: auto;
+		overflow-x: hidden;
+		@media #{$under-large} {
+			width: 100%;
+		}
+		@media screen and(max-width: 690px) {
+			padding: 50;
+		}
+
+		.corner {
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			background-color: $secondary-color;
+			transform: rotate(45deg);
+			right: -150px;
+			top: -150px;
+			box-shadow: 0 0 20px 0 #656565;
+			@media screen and(max-width: 690px){
+				display: none;
+			}
+
+			&__content {
+				position: absolute;
+				transform: rotate(-45deg);
+				width: 50%;
+				height: 50%;
+				top: 55%;
+				left: 25%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				font-size: 30px;
+				color: #fff;
+			}
+		}
+
+		#croix {
+			position: absolute;
+			top: 0;
+			width: 3rem;
+			right: 0;
+			opacity: 0.5
+		}
+
+		.content {
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.en-tete {
+			display: flex;
+			font-size: 30;
+			flex-wrap: wrap;
+			text-transform: uppercase;
+			align-items: center;
+			@media screen and (max-width: 690px) {
+				justify-content: center;
+			}
+
+			&__niveaux {
+				text-transform: none;
+				font-size: 22;
+				font-style: italic;
+				padding: 0 45px;
+			}
+		}
+
+		.prix__petit-ecran {
+			width: 100%;
+			display: none;
+			font-size: 20;
+			@media screen and(max-width: 690px) {
+				display: block;
+				text-align: center;
+			}
+			@media screen and(max-width: 690px) {
+				margin: 30px 0;
+			}
+
+			.trait {
+				@media #{$large-only} {
+					display: none;
+					height: 0;
+					width: 0;
+				}
+				@media #{$under-large} {
+					height: 0.1rem;
+					width: 100%;
+					visibility: visible;
+					background-color: white;
+				}
+			}
+
+			&__texte {
+				@media #{$large-only} {
+					display: none;
+				}
+				@media #{$under-large} {
+					text-align: center;
+					font-size: 150%;
+				}
+			}
+		}
+
+		.icone-bloc {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: baseline;
+			text-align: center;
+			@media screen and(max-width: 690px) {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			&__indiv {
+				@media screen and(max-width: 690px) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+
+		.texte-bloc {
+			display: block;
+			float: left;
+			width: 100%;
+			text-align: justify;
+		}
+
+		.footer {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			@media screen and(max-width: 690px) {
+				margin-top: 50px;
+			}
+
+			&__link {
+				margin-right: 30px;
+			}
+
+			&__inscription,
+			&__professeur {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex: 1;
+			}
+
+			&__professeur {
+				flex-direction: row;
+				@media screen and(max-width: 690px) {
+					margin-bottom: 20px;
+				}
+			}
+
+			&__inscription {
+				flex-direction: column;
+				height: auto;
+				flex: 1;
+
+				&__info {
+					font-style: italic;
+					font-size: 15px;
+					margin-bottom: 20px;
+				}
+
+				&__bouton {
+					margin-bottom: 10px;
+				}
+
+				&__bouton a {
+					padding: 10px;
+					box-sizing: content-box;
+					background: $primary-color;
+					border-radius: 5px;
+					text-transform: uppercase;
+				}
+			}
+
+			&__photo-block {
+				margin-right: 30px;
+			}
+
+			&__photo {
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+			}
+
+			&__note {
+				display: inline-block;
+				margin-left: 5px;
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				border: solid 1px #fff;
+
+				&--full {
+					background-color: #fff;
+				}
+
+				&:last-child {
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+}

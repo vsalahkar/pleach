@@ -1,0 +1,119 @@
+.creation {
+	&__layout {
+		height: 100vh;
+		width: 40%;
+		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
+		top: 0;
+		box-shadow: 3px 3px 50px grey;
+		position: absolute;
+		padding: 50;
+		overflow-y: auto;
+		@media screen and(max-width: 870px) {
+			width: 80%;
+			padding: 70;
+		}
+		@media #{$small-only} {
+			width: 100%;
+			padding: 50;
+		}
+
+		#croix {
+			z-index: 99999999999;
+			width: 52px;
+			height: 52px;
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			@media #{$small-only} {
+				width: 42px;
+				height: 42px;
+			}
+		}
+
+		.steps {
+			margin: 40px 0;
+			background: #fff;
+			height: 1px;
+			border-radius: 2px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			.step {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #FFF;
+				// background-color: transparent;
+				border: solid 1px #fff;
+
+				&--done {
+					background: $primary-color;
+				}
+			}
+		}
+
+		form {
+			padding: 0;
+			margin: 40px 0;
+
+			.input-group {
+				margin-bottom: 30px;
+			}
+
+			input[type="date"],
+			input[type="text"],
+			select,
+			textarea {
+				outline: 0;
+				background: none;
+				border-radius: 5px;
+				width: 100%;
+				padding: 10px;
+				border: solid 1px #fff;
+				resize: none;
+				color: #fff;
+				margin-top: 10px;
+				transition: all 0.3s;
+			}
+
+			.inputs {
+				display: flex;
+
+				input[type="radio"] {
+					flex: 1;
+					margin-left: 20px;
+					outline: 0;
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+
+				.input-group:first-child {
+					margin-right: 25px;
+				}
+			}
+		}
+
+		.end-form {
+			text-align: center;
+
+			.button {
+				background-color: $primary-color;
+				padding: 10px;
+				border-radius: 5px;
+				text-transform: uppercase;
+			}
+		}
+
+		.en-tete {
+			font-size: 30;
+			text-transform: uppercase;
+			@media #{$small-only} {
+				font-size: 23;
+			}
+		}
+	}
+}

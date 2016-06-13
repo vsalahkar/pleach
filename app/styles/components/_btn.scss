@@ -10,10 +10,30 @@
     text-transform: uppercase;
     font-family: $primary-font;
     transition: ease .7s;
+    border-radius: 0 5px 5px 0;
 
     &:hover {
         background-color: lighten($primary-color, 5);
         transition-timing-function: ease-in;
         transition: ease .7s;
     }
+}
+
+.header__sign-in, .header__sign-up {
+    display: inline-block;
+
+    &--btn {
+        text-decoration: none;
+        @include resp-padding(1rem, 2rem);
+        color: $base-color-1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    width: 4rem;
+}
+
+.back-btn {
+    
 }

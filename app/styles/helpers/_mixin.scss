@@ -4,7 +4,7 @@
 		font-size: $x-large-size *0.5;
 	}
 	@media #{$medium-only} {
-		font-size: $x-large-size *0.75;
+		font-size: $x-large-size *0.7;
 	}
 	@media #{$large-only} {
 		font-size: $x-large-size *0.85;
@@ -21,6 +21,19 @@
 	}
 	@media #{$large-only} {
 		padding : ($x-large-size1 *0.85) ($x-large-size2 *0.7);
+	}
+}
+
+@mixin resp-margin($x-large-size1, $x-large-size2) {
+	margin: ($x-large-size1) ($x-large-size2);
+	@media #{$small-only} {
+		margin : ($x-large-size1 *0.43) ($x-large-size2 *0.15);
+	}
+	@media #{$medium-only} {
+		margin : ($x-large-size1 *0.75) ($x-large-size2 *0.45);
+	}
+	@media #{$large-only} {
+		margin : ($x-large-size1 *0.85) ($x-large-size2 *0.7);
 	}
 }
 

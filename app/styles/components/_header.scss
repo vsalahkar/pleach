@@ -1,0 +1,68 @@
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	@include resp-padding(4rem, 4rem);
+	@include resp-font(1.7rem);
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: right;
+	display: flex;
+	align-items: center;
+
+	.header__chat,
+	.header__purpose {
+		text-decoration: none;
+		font-size: 1.5rem;
+		padding: 0.8rem 2rem;
+		transition: ease 0.7s;
+	}
+
+	.header__purpose {
+		color: $base-color-1;
+		background: $secondary-color;
+		border-radius: 15px;
+		box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+
+		&:hover {
+			background-color: darken($secondary-color, 10);
+			transition: ease 0.7s;
+		}
+	}
+
+	.header__chat {
+		color: $primary-color;
+	}
+
+	.header__picture {
+		width: 5rem;
+		height: 5rem;
+		margin: auto;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+
+		img {
+			width: auto;
+			max-height: 100%;
+		}
+	}
+	@media #{$small-only} {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: center;
+	}
+
+	.header__logo {
+		display: none;
+		@media #{$small-only} {
+			display: block;
+			width: 4rem;
+		}
+	}
+}

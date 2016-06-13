@@ -1,13 +1,22 @@
-@import "variables"; // @import "components/section";
-// @import "components/button";
-// @import "components/nav";
+@import "variables";
+//__helpers
 @import "helpers/mixin";
-@import "pages/header";
+@import "helpers/useful_classes";
+//__pages
 @import "pages/landing-page";
 @import "pages/profil";
+@import "pages/creation_atelier";
+@import "pages/atelier";
+@import "pages/messagerie";
+@import "pages/recherche";
+@import "pages/conversation";
+//__components
 @import "components/search-form";
 @import "components/btn";
 @import "components/rating";
+@import "components/header";
+@import "components/link";
+@import "components/modal";
 
 html {
     -webkit-box-sizing: border-box;
@@ -26,6 +35,8 @@ html {
 
 body {
     margin: 0;
+    font-family: $primary-font;
+    color: $base-color-1;
 
     .map-bg {
         position: relative;
@@ -37,7 +48,19 @@ body {
     }
 
     .landing-page,
-    .profil {
+    .profil,
+    .messagerie,
+    .creation_atelier,
+    .recherche,
+    .atelier {
+        position: absolute;
+
+        &__layout {
+            position: fixed;
+            overflow: auto;
+        }
+    }
+    .message {
         position: absolute;
 
         &__layout {

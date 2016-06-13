@@ -1,0 +1,122 @@
+$rayon_cercle: 80px;
+
+.messagerie {
+	&__layout {
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 40%;
+		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
+		padding: 50px;
+		box-shadow: 3px 3px 50px grey;
+		@media screen and(max-width: 1240px){
+			width: 60%;
+		}
+		@media screen and(max-width: 870px) {
+			width: 80%;
+			padding: 70;
+		}
+		@media #{$small-only} {
+			width: 100%;
+			padding: 50;
+		}
+
+		#croix {
+			height: 4rem;
+			right: 0;
+			top: 0;
+			position: absolute;
+		}
+
+		.en-tete__conversation {
+			display: flex;
+			font-size: 30;
+			flex-wrap: wrap;
+			text-transform: uppercase;
+			align-items: center;
+			@media #{$small-only} {
+				font-size: 18;
+			}
+
+			&__nb_conversation {
+				flex: 1;
+				text-align: center;
+				font-size: 22;
+				text-transform: none;
+				font-style: italic;
+				@media #{$small-only} {
+					font-size: 15;
+				}
+
+			}
+
+			&__cercle {
+				width: $rayon_cercle/3;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: $secondary-color;
+				text-align: center;
+				display: inline-block;
+				line-height: 27px;
+				margin-right: 20px;
+				font-size: 15;
+				font-weight: bold;
+			}
+		}
+
+		.conversation {
+			margin-top: 40px;
+			text-align: justify;
+			display: flex;
+			align-items: center;
+			@media #{$small-only} {
+				flex-direction: column;
+			}
+
+			&__photo {
+				width: 4rem;
+				height: 4rem;
+				display: inline-block;
+				position: relative;
+				overflow: hidden;
+				border-radius: 50%;
+				margin-right: 30px;
+
+				img {
+					width: auto;
+					max-height: 100%;
+				}
+				@media #{$small-only} {
+					margin-right: 0;
+				}
+			}
+
+			&__texte {}
+
+			&__nonlu {
+				width: $rayon_cercle/4;
+				height: $rayon_cercle/4;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: $secondary-color;
+				margin-right: 15px;
+				display: inline-block;
+				vertical-align: sub;
+			}
+
+			&__nom {
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			&__message {
+				display: flex;
+				align-content: center;
+				align-items: center;
+				text-decoration: none;
+			}
+		}
+	}
+}

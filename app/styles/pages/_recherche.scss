@@ -1,0 +1,158 @@
+$rayon_cercle: 80px;
+
+.recherche {
+	&__layout {
+		height: 100vh;
+		width: 40%;
+		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
+		top: 0;
+		box-shadow: 3px 3px 50px grey;
+		position: absolute;
+		padding: 50;
+		overflow-y: auto;
+		@media screen and(max-width: 1240px) {
+			width: 60%;
+		}
+		@media screen and(max-width: 870px) {
+			width: 80%;
+			padding: 70;
+		}
+		@media #{$small-only}{
+			width: 100%;
+			padding: 50;
+		}
+
+		#croix {
+			z-index: 99999999999;
+			width: 4rem;
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		.content {
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+		.en-tete {
+
+			&__nom-atelier {
+				display: flex;
+				font-size: 30;
+				flex-wrap: wrap;
+				text-transform: uppercase;
+				align-items: center;
+				@media #{$small-only}{
+					font-size: 23;
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		.localisation {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			font-style: italic;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
+
+			svg{
+
+				display: inline-block;
+				line-height: 27px;
+				margin-right: 20px;
+			}
+		}
+
+		.description {
+			text-align: justify;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
+		}
+
+		.date {
+			font-style: italic;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
+		}
+
+		.plus {
+			text-decoration: none;
+			color: white;
+			font-style: italic;
+			@media #{$small-only}{
+			}
+		}
+		.progression{
+			height: 15px;
+			border: solid 1px #fff;
+			border-radius: 15px;
+			margin-top: 20px;
+			overflow: hidden;
+			@media #{$small-only}{
+				margin-bottom: 30px;
+			}
+		}
+		.bar{
+			background-color: #fff;
+			width: 0;
+			height: 100%;
+			transition: all 0.5s;
+		}
+		.footer {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			@media #{$small-only}{
+				margin-top: 30px;
+			}
+
+			&__professeur {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex: 1;
+				flex-direction: row;
+			}
+
+			&__link {
+				margin-right: 30px;
+			}
+
+			&__photo-block {
+				margin-right: 30px;
+			}
+
+			&__photo {
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+			}
+
+			&__note {
+				display: inline-block;
+				margin-left: 5px;
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				border: solid 1px #fff;
+
+				&--full {
+					background-color: #fff;
+				}
+
+				&:last-child {
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+}
