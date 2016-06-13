@@ -11,7 +11,7 @@ $rayon_cercle: 80px;
 		box-shadow: 3px 3px 50px grey;
 		overflow-y: auto;
 		overflow-x: hidden;
-		@media #{$large} {
+		@media #{$under-large} {
 			width: 100%;
 		}
 		@media screen and(max-width: 690px) {
@@ -98,7 +98,7 @@ $rayon_cercle: 80px;
 					height: 0;
 					width: 0;
 				}
-				@media #{$large} {
+				@media #{$under-large} {
 					height: 0.1rem;
 					width: 100%;
 					visibility: visible;
@@ -110,7 +110,7 @@ $rayon_cercle: 80px;
 				@media #{$large-only} {
 					display: none;
 				}
-				@media #{$large} {
+				@media #{$under-large} {
 					text-align: center;
 					font-size: 150%;
 				}

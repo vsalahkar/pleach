@@ -2,6 +2,8 @@ $rayon_cercle: 80px;
 
 .messagerie {
 	&__layout {
+		top: 0;
+		left: 0;
 		height: 100vh;
 		width: 40%;
 		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
