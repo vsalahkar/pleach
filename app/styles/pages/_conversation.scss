@@ -1,59 +1,57 @@
 .message {
-
 	.message__layout {
 		height: 100vh;
 		width: 40%;
 		background-image: linear-gradient(145deg, transparentize($primary-color, .2), transparentize($secondary-color, .2));
-		padding: 50px 0px 30px 0px;
+		padding: 50px 0 30px;
 		box-shadow: 3px 3px 50px grey;
-		display : flex;
+		display: flex;
 		flex-direction: column;
-		@media screen and(max-width: 1240px){
+		@media screen and(max-width: 1240px) {
 			width: 60%;
 		}
 		@media screen and(max-width: 870px) {
 			width: 80%;
 		}
-		@media screen and(max-width: $petit_ecran){
+		@media #{$under-small} {
 			width: 100%;
 		}
 	}
 
-    .en-tete__message {
+	.en-tete__message {
 
-        text-transform: uppercase;
-        font-style: italic;
-        display: flex;
-        align-items: center;
-		padding : 0 50px;
+		text-transform: uppercase;
+		font-style: italic;
+		display: flex;
+		align-items: center;
+		padding: 0 50px;
 		margin-bottom: 40px;
 
+		&__precedent-btn {
+			flex-grow: 1;
+		}
 
-            &__precedent-btn {
-                flex-grow: 1;
-            }
+		&__title {
+			flex-grow: 1;
+			font-size: 30;
+			text-align: center;
+		}
 
-            &__title {
-                flex-grow: 1;
-                font-size: 30;
-                text-align: center;
-            }
+		&__linker {
+			flex-grow: 1;
+		}
 
-            &__linker {
-                flex-grow: 1;
-            }
+		&__date {
+			flex-grow: 1;
+			font-size: 25;
 
-            &__date {
-                flex-grow: 1;
-                font-size: 25;
-
-            }
-    }
+		}
+	}
 
 	.discussion {
 		flex: 1;
 		overflow: auto;
-		padding : 0 50px;
+		padding: 0 50px;
 
 	}
 
@@ -70,13 +68,10 @@
 			flex-direction: row-reverse;
 
 			.message__photo {
-				margin: 0px 0px 20px 10px;
+				margin: 0 0 20px 10px;
 			}
 
 			.message__contenu {
-
-
-
 				&__text {
 
 					background: $primary-color;
@@ -94,91 +89,85 @@
 
 		}
 
-				&__photo {
-					min-width: 2.5rem;
-					height: 2.5rem;
-					margin-right: 10px;
-					overflow: hidden;
-					margin-bottom: 20px;
-					border-radius: 50%;
+		&__photo {
+			min-width: 2.5rem;
+			height: 2.5rem;
+			margin-right: 10px;
+			overflow: hidden;
+			margin-bottom: 20px;
+			border-radius: 50%;
 
+			img {
 
-					img {
+				height: 100%;
+			}
+		}
 
-						height: 100%;
-					}
-				}
+		&__contenu {
 
-				&__contenu {
+			max-width: 50%;
+			@media #{$under-small} {
+				max-width: 100%;
+			}
 
+			&__text {
 
-					max-width : 50%;
-					@media screen and(max-width: $petit_ecran){
-						max-width: 100%;
-					}
+				padding: 10px;
+				background: #f2f2f2;
+				color: black;
+				border-radius: 5px;
+			}
 
-					&__text {
+			&__heure {
 
-						padding: 10px;
-						background: #f2f2f2;
-						color: black;
-						border-radius: 5px;
-					}
-
-					&__heure {
-
-						font-style: italic;
-						text-align: right;
-						margin-top: 5px;
-					}
+				font-style: italic;
+				text-align: right;
+				margin-top: 5px;
+			}
 		}
 
 	}
 
-    .rediger {
-        width: 100%;
+	.rediger {
+		width: 100%;
 		display: flex;
-		padding : 0 50px;
+		padding: 30px 50px 0;
 
+		&__input {
+			background: none;
+			padding: 10px;
+			border: solid 1px #fff;
+			width: 100%;
+			flex: 1;
+			border-bottom-left-radius: 5px;
+			border-top-left-radius: 5px;
+		}
 
-				&__input {
-					background: none;
-					padding: 10px;
-					border: solid 1px #fff;
-					width: 100%;
-					flex-grow: 1;
-					border-bottom-left-radius: 5px;
-					border-top-left-radius: 5px;
-				}
+		&__btn {
+			background: #838ab6;
+			border-bottom-right-radius: 5px;
+			border-top-right-radius: 5px;
+			padding: 10px;
+			color: white;
+		}
 
-						&__btn {
-							flex-grow: 1;
-							background: #838ab6;
-							border-bottom-right-radius: 5px;
-							border-top-right-radius: 5px;
-							padding: 2%;
-							color: white;
-						}
-
-    }
-
-    ::-webkit-input-placeholder {
-        color: white;
-        font-family: 'Open Sans', sans-serif;
-    }
-	::-webkit-scrollbar
-	{
-	  width: 5px;  /* for vertical scrollbars */
-	  height: 5px; /* for horizontal scrollbars */
 	}
 
-	::-webkit-scrollbar-track
-	{
-	  background: rgba(0, 0, 0, 0.1);
+	::-webkit-input-placeholder {
+		color: white;
+		font-family: 'Open Sans', sans-serif;
 	}
 
-	::-webkit-scrollbar-thumb
-	{
-	  background: rgba(0, 0, 0, 0.3);
+	::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.1);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgba(0, 0, 0, 0.3);
 	}
 }
